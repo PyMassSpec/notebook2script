@@ -25,6 +25,9 @@ python_versions:
 # travis secure password for PyPI
 travis_pypi_secure: ""
 
+additional_ignore:
+  - "tests/output/"
+
 # additional lines for MANIFEST.in
 #manifest_additional:
 #  -

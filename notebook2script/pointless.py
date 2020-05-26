@@ -133,6 +133,9 @@ into print function calls
 #    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 
+# TODO: not all statements that need to be made into prints are being picked up.
+#  Include a list of those and convert manually
+
 
 # stdlib
 import contextlib
@@ -193,14 +196,10 @@ class Pointless(PyLinter):
 		file_lines = filename.read_text().splitlines()
 
 		for node in self.statements:
-			# print(node)
-			# print(node.value.as_string())
-			# print(node.lineno)
-			# print(node.tolineno)
-			# print(node.col_offset)
 
 			if node.tolineno != node.lineno:
 				warnings.warn("Currently unable to convert this statement")
+
 			else:
 				value = node.value.as_string()
 				col = node.col_offset
@@ -232,14 +231,6 @@ class Pointless(PyLinter):
 		"""
 
 		self.statements.append(node)
-		#
-		# if confidence is None:
-		# 	confidence = UNDEFINED
-		# message_definitions = self.msgs_store.get_message_definitions(msgid)
-		# for message_definition in message_definitions:
-		# 	self.add_one_message(
-		# 			message_definition, line, node, args, confidence, col_offset
-		# 			)
 		super().add_message(msgid, line, node, args, confidence, col_offset)
 
 
@@ -271,35 +262,3 @@ def fix_import_path(args):
 		yield
 	finally:
 		sys.path[:] = original
-
-
-def main():
-	"""helper class to use as main for pylint :
-
-	run(*sys.argv[1:])
-	"""
-
-	linter = Pointless()
-
-	from notebook2script import scripts_dir
-	for filename in scripts_dir.glob("*.py"):
-		linter.process_file(filename)
-		# TODO: not all statements that need to be made into prints are being picked up.
-		#  Include a list of those and convert manually
-
-
-if __name__ == '__main__':
-	import os
-
-	# Strip out the current working directory from sys.path.
-	# Having the working directory in `sys.path` means that `pylint` might
-	# inadvertently import user code from modules having the same name as
-	# stdlib or pylint's own modules.
-	# CPython issue: https://bugs.python.org/issue33053
-	if sys.path[0] == "" or sys.path[0] == os.getcwd():
-		sys.path.pop(0)
-
-	try:
-		main()
-	except KeyboardInterrupt:
-		sys.exit(1)
