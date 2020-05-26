@@ -1,15 +1,14 @@
 #!/usr/bin/python3
 
+# This file is managed by `git_helper`. Don't edit it directly
+
 import platform
 import rst2txt
 import sys
 from docutils.core import publish_file
 from io import StringIO
 
-from __pkginfo__ import (
-	author, extras_require, install_requires, long_description,
-	modname, project_urls, repo_root, short_desc, VERSION, web,
-	)
+from __pkginfo__ import *
 
 recipe_dir = repo_root / "conda"
 
@@ -25,13 +24,15 @@ if isinstance(extras_require, dict):
 		all_requirements += requires
 
 all_requirements = set(x.replace(" ", '') for x in set(all_requirements))
-requirements_block = "\n".join(f"    - {req}" for req in all_requirements)
+requirements_block = "\n".join(f"    - {req}" for req in all_requirements if req)
 
-txt_readme = publish_file(source=StringIO(long_description), writer=rst2txt.Writer())
+# txt_readme = publish_file(source=StringIO(long_description), writer=rst2txt.Writer())
+# description_block = "\n".join([line.replace('"', '\\"') for line in txt_readme.split("\n")])
+description_block = conda_description.replace('"', '\\"')
 
 with open(recipe_dir / "meta.yaml", "w") as fp:
-	fp.write(f"""{{% set name = "{modname}" %}}
-{{% set version = "{VERSION}" %}}
+	fp.write(f"""{{% set name = "{pypi_name}" %}}
+{{% set version = "{__version__}" %}}
 
 package:
   name: "{{{{ name|lower }}}}"
@@ -42,7 +43,7 @@ source:
 
 build:
 #  entry_points:
-#    - {modname} = {modname}:main
+#    - {import_name} = {import_name}:main
 #  skip_compile_pyc:
 #    - "*/templates/*.py"          # These should not (and cannot) be compiled
   noarch: python
@@ -63,22 +64,22 @@ requirements:
 
 test:
   imports:
-    - {modname}
+    - {import_name}
 
 about:
   home: "{web}"
-  license: "GNU Lesser General Public v3 (LGPLv3)"
-  license_family: LGPL
+  license: "{__license__}"
+  # license_family: LGPL
   # license_file: requirements.txt
   summary: "{short_desc}"
-  description: "txt_readme"
+  description: "{description_block}"
   doc_url: {project_urls["Documentation"]}
   dev_url: {project_urls["Source Code"]}
 
 extra:
   maintainers:
     - {author}
-    - github.com/domdfcoding
+    - github.com/{github_username}
 
 """)
 

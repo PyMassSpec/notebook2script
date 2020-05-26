@@ -15,7 +15,7 @@ conda config --add channels domdfcoding || exit 1
 conda build conda --output-folder conda/dist
 
 
-for f in conda/dist/noarch/package_name-*.tar.bz2; do
+for f in conda/dist/noarch/notebook2script-*.tar.bz2; do
   echo "$f"
   conda install $f || exit 1
   if [ -z "$TRAVIS_TAG" ]; then

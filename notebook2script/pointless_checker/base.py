@@ -1,6 +1,5 @@
 ################################################################################
 #                                                                              #
-#    PyMassSpec software for processing of mass-spectrometry data              #
 #    Copyright (C) 2020 Dominic Davis-Foster                                   #
 #    Based on pylint                                                           #
 #    See pointless/__init__.py for full copyright information                  #
@@ -20,6 +19,7 @@
 #                                                                              #
 ################################################################################
 
+# 3rd party
 import astroid
 import astroid.bases
 import astroid.scoped_nodes
@@ -71,14 +71,6 @@ class BasicChecker(BaseChecker):
 	def visit_expr(self, node):
 		"""Check for various kind of statements without effect"""
 		expr = node.value
-		# # print(node)
-		# print(node.value.as_string())
-		# print(node.lineno)
-		# print(node.tolineno)
-		# print(node.col_offset)
-		# print(f"print({node.value.as_string()})")
-		# # exit()
-		# input(">")
 
 		if isinstance(expr, astroid.Const) and isinstance(expr.value, str):
 			# treat string statement in a separated message
@@ -86,9 +78,7 @@ class BasicChecker(BaseChecker):
 			# An attribute docstring is defined as being a string right after
 			# an assignment at the module level, class level or __init__ level.
 			scope = expr.scope()
-			if isinstance(
-					scope, (astroid.ClassDef, astroid.Module, astroid.FunctionDef)
-					):
+			if isinstance(scope, (astroid.ClassDef, astroid.Module, astroid.FunctionDef)):
 				if isinstance(scope, astroid.FunctionDef) and scope.name != "__init__":
 					pass
 				else:
@@ -110,20 +100,13 @@ class BasicChecker(BaseChecker):
 		# warn W0106 if we have any underlying function call (we can't predict
 		# side effects), else pointless-statement
 		if (
-				isinstance(
-						expr, (astroid.Yield, astroid.Await, astroid.Ellipsis, astroid.Call)
-						)
-				or (
-				isinstance(node.parent, astroid.TryExcept)
-				and node.parent.body == [node]
-		)
+				isinstance(expr, (astroid.Yield, astroid.Await, astroid.Ellipsis, astroid.Call))
+				or (isinstance(node.parent, astroid.TryExcept) and node.parent.body == [node])
 				or (isinstance(expr, astroid.Const) and expr.value is Ellipsis)
-		):
+			):
 			return
 		if any(expr.nodes_of_class(astroid.Call)):
-			self.add_message(
-					"expression-not-assigned", node=node, args=expr.as_string()
-					)
+			self.add_message("expression-not-assigned", node=node, args=expr.as_string())
 		else:
 			self.add_message("pointless-statement", node=node)
 

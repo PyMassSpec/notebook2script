@@ -53,7 +53,7 @@ pypi_name = "notebook2script"
 import_name = "notebook2script"
 py_modules = []
 entry_points = {
-		"console_scripts": []
+		"console_scripts": ['notebook2script = notebook2script.__main__:main']
 		}
 
 __license__ = "GNU General Public License v2 (GPLv2)"
@@ -74,6 +74,11 @@ repo_root = pathlib.Path(__file__).parent
 
 # Get info from files; set: long_description
 long_description = (repo_root / "README.rst").read_text().replace("0.0.0", __version__) + '\n'
+conda_description = """Convert Jupyter Notebooks to Python Scripts
+
+
+Before installing please ensure you have added the following channels: conda-forge, domdfcoding"""
+__all__.append("conda_description")
 
 install_requires = (repo_root / "requirements.txt").read_text().split('\n')
 extras_require = {'all': []}

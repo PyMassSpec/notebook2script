@@ -4,7 +4,7 @@ API Reference
 
 .. contents:: Table of Contents
 
-.. automodule:: package_name
+.. automodule:: notebook2script
     :members:
     :private-members:
     :special-members:
@@ -12,7 +12,7 @@ API Reference
     :undoc-members:
 
 ===================================
-:mod:`package_name.__init__`
+:mod:`notebook2script.__init__`
 ===================================
 
 

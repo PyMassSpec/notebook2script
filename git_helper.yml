@@ -8,7 +8,7 @@ license: 'GPLv2'
 short_desc: 'Convert Jupyter Notebooks to Python Scripts'
 conda_description: 'Convert Jupyter Notebooks to Python Scripts'
 
-enable_conda: False
+#enable_conda: False
 
 conda_channels:
   - conda-forge
@@ -28,6 +28,9 @@ travis_pypi_secure: ""
 # additional lines for MANIFEST.in
 #manifest_additional:
 #  -
+
+console_scripts:
+  - "notebook2script = notebook2script.__main__:main"
 
 classifiers:
   - "Development Status :: 4 - Beta"
