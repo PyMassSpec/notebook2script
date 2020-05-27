@@ -6,7 +6,6 @@ Requires nbconvert (pip install nbconvert) and pandoc (apt-get install pandoc)
 
 from nbconvert import PythonExporter
 
-
 py_exporter = PythonExporter()
 
 
@@ -27,4 +26,3 @@ def convert_notebook(nb_file, outfile):
 
 	with outfile.open("w") as fp:
 		fp.write(script)
-

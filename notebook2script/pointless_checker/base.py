@@ -65,9 +65,7 @@ class BasicChecker(BaseChecker):
 
 	reports = ()
 
-	@utils.check_messages(
-			"pointless-statement", "pointless-string-statement", "expression-not-assigned"
-			)
+	@utils.check_messages("pointless-statement", "pointless-string-statement", "expression-not-assigned")
 	def visit_expr(self, node):
 		"""Check for various kind of statements without effect"""
 		expr = node.value
@@ -84,10 +82,9 @@ class BasicChecker(BaseChecker):
 				else:
 					sibling = expr.previous_sibling()
 					if (
-							sibling is not None
-							and sibling.scope() is scope
+							sibling is not None and sibling.scope() is scope
 							and isinstance(sibling, (astroid.Assign, astroid.AnnAssign))
-					):
+							):
 						return
 			self.add_message("pointless-string-statement", node=node)
 			return
@@ -103,7 +100,7 @@ class BasicChecker(BaseChecker):
 				isinstance(expr, (astroid.Yield, astroid.Await, astroid.Ellipsis, astroid.Call))
 				or (isinstance(node.parent, astroid.TryExcept) and node.parent.body == [node])
 				or (isinstance(expr, astroid.Const) and expr.value is Ellipsis)
-			):
+				):
 			return
 		if any(expr.nodes_of_class(astroid.Call)):
 			self.add_message("expression-not-assigned", node=node, args=expr.as_string())

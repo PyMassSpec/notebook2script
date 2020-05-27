@@ -136,7 +136,6 @@ into print function calls
 # TODO: not all statements that need to be made into prints are being picked up.
 #  Include a list of those and convert manually
 
-
 # stdlib
 import contextlib
 import pathlib
@@ -188,9 +187,7 @@ class Pointless(PyLinter):
 		self.statements = []
 
 		with fix_import_path([filename]):
-			self._check_files(
-					self.get_ast, self._iterate_file_descrs([filename])
-					)
+			self._check_files(self.get_ast, self._iterate_file_descrs([filename]))
 
 		filename = pathlib.Path(filename)
 		file_lines = filename.read_text().splitlines()
@@ -203,11 +200,11 @@ class Pointless(PyLinter):
 			else:
 				value = node.value.as_string()
 				col = node.col_offset
-				lineno = node.lineno-1
+				lineno = node.lineno - 1
 
 				line = file_lines[lineno]
 				line_pre_statement = line[:col]
-				line_post_statement = line[col+len(value):]
+				line_post_statement = line[col + len(value):]
 				print(f"{line_pre_statement}print({value}){line_post_statement}")
 				file_lines[lineno] = f"{line_pre_statement}print({value}){line_post_statement}"
 
@@ -218,9 +215,7 @@ class Pointless(PyLinter):
 		# print("\n".join(file_lines))
 		filename.write_text("\n".join(file_lines))
 
-	def add_message(
-			self, msgid, line=None, node=None, args=None, confidence=None, col_offset=None
-			):
+	def add_message(self, msgid, line=None, node=None, args=None, confidence=None, col_offset=None):
 		"""Adds a message given by ID or name.
 
 		If provided, the message string is expanded using args.

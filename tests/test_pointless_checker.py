@@ -12,7 +12,8 @@ def test_pointless_checker():
 
 		outfile = tmpdir / "test_script.py"
 
-		outfile.write_text("""\
+		outfile.write_text(
+				"""\
 #!/use/bin/python3
 
 # Based on https://realpython.com/how-to-use-numpy-arange/
@@ -36,7 +37,8 @@ np.arange(
 data = np.arange(10)
 data
 
-""")
+"""
+				)
 
 		linter = Pointless()
 
