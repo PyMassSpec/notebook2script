@@ -34,7 +34,6 @@ def test_cli_backend():
 
 print("hello world")
 
-
 # Let's start with some basic numerical operations.
 
 # In[2]:
@@ -42,54 +41,45 @@ print("hello world")
 
 print(1 + 1)
 
-
 # In[3]:
 
 
 print(2 * 2)
-
 
 # In[4]:
 
 
 print(4 / 2)
 
-
 # In[5]:
 
 
 print(3 - 2)
-
 
 # In[6]:
 
 
 print(2 + 3)
 
-
 # In[7]:
 
 
 print(2 / 3)
-
 
 # In[8]:
 
 
 type(3)
 
-
 # In[9]:
 
 
 type(3.0)
 
-
 # In[10]:
 
 
 type('3')
-
 
 # In[11]:
 

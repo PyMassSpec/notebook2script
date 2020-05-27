@@ -16,6 +16,10 @@ conda_channels:
 
 python_deploy_version: 3.6
 
+exclude_files:
+  - lint_roller
+  # Must not lint-roll tests
+
 # Versions to run tests for
 python_versions:
   - '3.6'
