@@ -8,7 +8,7 @@ license: 'GPLv2'
 short_desc: 'Convert Jupyter Notebooks to Python Scripts'
 conda_description: 'Convert Jupyter Notebooks to Python Scripts'
 
-#enable_conda: False
+enable_conda: False
 
 conda_channels:
   - conda-forge
@@ -45,7 +45,6 @@ classifiers:
   - "Environment :: Console"
   - "Operating System :: POSIX :: Linux"
   - "Programming Language :: Python :: 3 :: Only"
-  - "Programming Language :: Python :: Implementation :: CPython"
   - "Topic :: Software Development"
   - "Topic :: Utilities"
 

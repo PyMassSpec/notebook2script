@@ -14,8 +14,6 @@ notebook2script
 	  - |travis| |requires| |coveralls| |codefactor|
 	* - PyPI
 	  - |pypi-version| |supported-versions| |supported-implementations| |wheel|
-	* - Anaconda
-	  - |conda-version| |conda-platform|
 	* - Other
 	  - |license| |language| |commits-since| |commits-latest| |maintained| 
 	
@@ -54,14 +52,6 @@ notebook2script
 .. |wheel| image:: https://img.shields.io/pypi/wheel/notebook2script
 	:target: https://pypi.org/project/notebook2script/
 	:alt: PyPI - Wheel
-
-.. |conda-version| image:: https://img.shields.io/conda/v/domdfcoding/notebook2script
-	:alt: Conda - Package Version
-	:target: https://anaconda.org/domdfcoding/notebook2script
-
-.. |conda-platform| image:: https://img.shields.io/conda/pn/domdfcoding/notebook2script?label=conda%7Cplatform
-	:alt: Conda - Platform
-	:target: https://anaconda.org/domdfcoding/notebook2script
 
 .. |license| image:: https://img.shields.io/github/license/domdfcoding/notebook2script
 	:alt: License

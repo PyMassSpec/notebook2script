@@ -74,11 +74,6 @@ repo_root = pathlib.Path(__file__).parent
 
 # Get info from files; set: long_description
 long_description = (repo_root / "README.rst").read_text().replace("0.0.0", __version__) + '\n'
-conda_description = """Convert Jupyter Notebooks to Python Scripts
-
-
-Before installing please ensure you have added the following channels: conda-forge, domdfcoding"""
-__all__.append("conda_description")
 
 install_requires = (repo_root / "requirements.txt").read_text().split('\n')
 extras_require = {'all': []}
@@ -90,10 +85,10 @@ classifiers = [
 		'Environment :: Console',
 		'Operating System :: POSIX :: Linux',
 		'Programming Language :: Python :: 3 :: Only',
-		'Programming Language :: Python :: Implementation :: CPython',
 		'Topic :: Software Development',
 		'Topic :: Utilities',
 		'Programming Language :: Python :: 3.6',
+		'Programming Language :: Python :: Implementation :: CPython',
 		'Programming Language :: Python :: 3.7',
 		'Programming Language :: Python :: 3.8',
 		'Programming Language :: Python',
