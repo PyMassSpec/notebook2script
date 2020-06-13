@@ -19,8 +19,8 @@
 #                                                                              #
 ################################################################################
 # 3rd party
-from pylint.checkers.base_checker import BaseChecker, BaseTokenChecker
-from pylint.utils import register_plugins
+from pylint.checkers.base_checker import BaseChecker, BaseTokenChecker  # type: ignore
+from pylint.utils import register_plugins  # type: ignore
 
 
 def initialize(linter):

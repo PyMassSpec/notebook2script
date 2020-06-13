@@ -143,9 +143,9 @@ import sys
 import warnings
 
 # 3rd party
-from pylint import reporters
-from pylint.lint.pylinter import PyLinter
-from pylint.utils import utils
+from pylint import reporters  # type: ignore
+from pylint.lint.pylinter import PyLinter  # type: ignore
+from pylint.utils import utils  # type: ignore
 
 # this package
 from notebook2script import pointless_checker

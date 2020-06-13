@@ -8,7 +8,7 @@ notebook2script
 
 .. end short_desc
 
-.. start shields
+.. start shields 
 
 .. list-table::
 	:stub-columns: 1
@@ -21,7 +21,7 @@ notebook2script
 	* - PyPI
 	  - |pypi-version| |supported-versions| |supported-implementations| |wheel|
 	* - Other
-	  - |license| |language| |commits-since| |commits-latest| |maintained|
+	  - |license| |language| |commits-since| |commits-latest| |maintained| 
 
 .. |docs| image:: https://img.shields.io/readthedocs/notebook2script/latest?logo=read-the-docs
 	:target: https://notebook2script.readthedocs.io/en/latest/?badge=latest
@@ -115,4 +115,9 @@ To install with ``conda``:
 	Building
 
 .. start links
+
+View the :ref:`Function Index <genindex>` or browse the `Source Code <_modules/index.html>`__.
+
+`Browse the GitHub Repository <https://github.com/domdfcoding/notebook2script>`__
+
 .. end links

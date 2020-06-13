@@ -20,12 +20,12 @@
 ################################################################################
 
 # 3rd party
-import astroid
-import astroid.bases
-import astroid.scoped_nodes
-from pylint import interfaces
-from pylint.checkers import utils
-from pylint.checkers.base_checker import BaseChecker
+import astroid  # type: ignore
+import astroid.bases  # type: ignore
+import astroid.scoped_nodes  # type: ignore
+from pylint import interfaces  # type: ignore
+from pylint.checkers import utils  # type: ignore
+from pylint.checkers.base_checker import BaseChecker  # type: ignore
 
 
 class BasicChecker(BaseChecker):

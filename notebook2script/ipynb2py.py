@@ -23,7 +23,7 @@ Requires nbconvert (pip install nbconvert) and pandoc (apt-get install pandoc)
 ################################################################################
 
 # 3rd party
-from nbconvert import PythonExporter
+from nbconvert import PythonExporter  # type: ignore
 
 py_exporter = PythonExporter()
 
