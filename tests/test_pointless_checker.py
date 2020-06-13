@@ -1,5 +1,8 @@
-import tempfile
+# stdlib
 import pathlib
+import tempfile
+
+# this package
 from notebook2script.pointless import Pointless
 
 

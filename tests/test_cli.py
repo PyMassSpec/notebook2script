@@ -1,5 +1,7 @@
+# stdlib
 import pathlib
 
+# this package
 from notebook2script.__main__ import process_multiple_notebooks
 
 tests_dir = pathlib.Path(__file__).parent.absolute()

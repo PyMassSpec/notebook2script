@@ -1,9 +1,8 @@
 ################################################################################
 #                                                                              #
-#    PyMassSpec software for processing of mass-spectrometry data              #
 #    Copyright (C) 2020 Dominic Davis-Foster                                   #
 #    Based on pylint                                                           #
-#    See pointless/__init__.py for full copyright information                  #
+#    See notebook2script/pointless.py for full copyright information           #
 #                                                                              #
 #    This program is free software; you can redistribute it and/or modify      #
 #    it under the terms of the GNU General Public License version 2 as         #
@@ -19,13 +18,16 @@
 #    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.                 #
 #                                                                              #
 ################################################################################
-
+# 3rd party
 from pylint.checkers.base_checker import BaseChecker, BaseTokenChecker
 from pylint.utils import register_plugins
 
 
 def initialize(linter):
-	"""initialize linter with checkers in this package """
+	"""
+	Initialize linter with checkers in this package
+	"""
+
 	register_plugins(linter, __path__[0])
 
 

@@ -2,7 +2,7 @@
 #                                                                              #
 #    Copyright (C) 2020 Dominic Davis-Foster                                   #
 #    Based on pylint                                                           #
-#    See pointless/__init__.py for full copyright information                  #
+#    See notebook2script/pointless.py for full copyright information           #
 #                                                                              #
 #    This program is free software; you can redistribute it and/or modify      #
 #    it under the terms of the GNU General Public License version 2 as         #

@@ -1,6 +1,12 @@
-****************
+================
 notebook2script
-****************
+================
+
+.. start short_desc
+
+**Convert Jupyter Notebooks to Python Scripts**
+
+.. end short_desc
 
 .. start shields 
 
@@ -16,32 +22,32 @@ notebook2script
 	  - |pypi-version| |supported-versions| |supported-implementations| |wheel|
 	* - Other
 	  - |license| |language| |commits-since| |commits-latest| |maintained| 
-	
-.. |docs| image:: https://readthedocs.org/projects/notebook2script/badge/?version=latest
+
+.. |docs| image:: https://img.shields.io/readthedocs/notebook2script/latest?logo=read-the-docs
 	:target: https://notebook2script.readthedocs.io/en/latest/?badge=latest
 	:alt: Documentation Status
 
 .. |travis| image:: https://img.shields.io/travis/com/domdfcoding/notebook2script/master?logo=travis
 	:target: https://travis-ci.com/domdfcoding/notebook2script
 	:alt: Travis Build Status
-	
+
 .. |requires| image:: https://requires.io/github/domdfcoding/notebook2script/requirements.svg?branch=master
 	:target: https://requires.io/github/domdfcoding/notebook2script/requirements/?branch=master
 	:alt: Requirements Status
 
-.. |coveralls| image:: https://coveralls.io/repos/github/domdfcoding/notebook2script/badge.svg?branch=master
+.. |coveralls| image:: https://shields.io/coveralls/github/domdfcoding/notebook2script/master?logo=coveralls
 	:target: https://coveralls.io/github/domdfcoding/notebook2script?branch=master
 	:alt: Coverage
 
-.. |codefactor| image:: https://img.shields.io/codefactor/grade/github/domdfcoding/notebook2script
+.. |codefactor| image:: https://img.shields.io/codefactor/grade/github/domdfcoding/notebook2script?logo=codefactor
 	:target: https://www.codefactor.io/repository/github/domdfcoding/notebook2script
 	:alt: CodeFactor Grade
 
-.. |pypi-version| image:: https://img.shields.io/pypi/v/notebook2script.svg
+.. |pypi-version| image:: https://img.shields.io/pypi/v/notebook2script
 	:target: https://pypi.org/project/notebook2script/
 	:alt: PyPI - Package Version
 
-.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/notebook2script.svg
+.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/notebook2script
 	:target: https://pypi.org/project/notebook2script/
 	:alt: PyPI - Supported Python Versions
 
@@ -73,8 +79,6 @@ notebook2script
 
 .. end shields
 
-description goes here
-
 |
 
 Installation
@@ -86,12 +90,12 @@ To install with ``pip``:
 
 .. code-block:: bash
 
-    $ python -m pip install pkgname
+	$ python -m pip install pkgname
 
 To install with ``conda``:
 
 .. code-block:: bash
 
-    $ conda config --add channels http://conda.anaconda.org/domdfcoding
-    $ conda install pkgname
+	$ conda config --add channels http://conda.anaconda.org/domdfcoding
+	$ conda install pkgname
 
