@@ -22,23 +22,29 @@ Requires nbconvert (pip install nbconvert) and pandoc (apt-get install pandoc)
 #                                                                              #
 ################################################################################
 
+# stdlib
+import os
+import pathlib
+from typing import Union
+
 # 3rd party
 from nbconvert import PythonExporter  # type: ignore
 
 py_exporter = PythonExporter()
 
 
-def convert_notebook(nb_file, outfile):
+def convert_notebook(nb_file: Union[str, pathlib.Path], outfile: Union[str, pathlib.Path, os.PathLike]):
 	"""
 	Convert a notebook to a python file
 
 	:param nb_file: Filename of the Jupyter Notebook to convert
-	:type nb_file: pathlib.Path
 	:param outfile: Filename to save the output script as
-	:type outfile: pathlib.Path
 	"""
 
 	script, *_ = py_exporter.from_file(str(nb_file))
+
+	if not isinstance(outfile, pathlib.Path):
+		outfile = pathlib.Path(outfile)
 
 	if not outfile.parent.is_dir():
 		outfile.parent.mkdir(parents=True)

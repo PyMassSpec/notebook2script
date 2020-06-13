@@ -34,23 +34,3 @@ API Reference
     :special-members:
     :inherited-members:
     :undoc-members:
-
-
-===========================================
-:mod:`notebook2script.pointless_checker`
-===========================================
-
-.. automodule:: notebook2script.pointless_checker.__init__
-    :members:
-    :private-members:
-    :special-members:
-    :inherited-members:
-    :undoc-members:
-
-
-.. automodule:: notebook2script.pointless_checker.base
-    :members:
-    :private-members:
-    :special-members:
-    :inherited-members:
-    :undoc-members:

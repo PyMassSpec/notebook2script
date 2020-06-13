@@ -23,7 +23,7 @@ import os
 import pathlib
 import sys
 import warnings
-from pprint import pprint
+from typing import Iterable, Union
 
 # this package
 from notebook2script.ipynb2py import convert_notebook
@@ -35,7 +35,7 @@ sys.path.append("../..")
 linter = Pointless()
 
 
-def main():
+def main() -> None:
 	# Strip out the current working directory from sys.path.
 	# Having the working directory in `sys.path` means that `pylint` might
 	# inadvertently import user code from modules having the same name as
@@ -68,7 +68,22 @@ def main():
 	process_multiple_notebooks(notebooks, args.outdir, overwrite=args.overwrite)
 
 
-def process_multiple_notebooks(notebooks, outdir, overwrite=False):
+def process_multiple_notebooks(
+		notebooks: Iterable[Union[str, pathlib.Path]],
+		outdir: Union[str, pathlib.Path, os.PathLike],
+		overwrite: bool = False,
+		) -> None:
+	"""
+
+	:param notebooks: An iterable of notebook filenames to process
+	:param outdir: The directory to store the Python output in.
+	:param overwrite: Whether to overwrite existing files. Default :py:obj:`False`
+	:type overwrite: bool
+	"""
+
+	if not isinstance(outdir, pathlib.Path):
+		outdir = pathlib.Path(outdir)
+
 	all_notebooks = []
 
 	for notebook in notebooks:
@@ -91,7 +106,13 @@ def process_multiple_notebooks(notebooks, outdir, overwrite=False):
 				print(f"{notebook} not found")
 
 
-def process_notebook(notebook, outfile):
+def process_notebook(notebook, outfile: Union[str, pathlib.Path, os.PathLike]) -> None:
+	"""
+
+	:param notebook: The filename of the notebook to process
+	:param outfile: The filename to store the Python output as.
+	"""
+
 	convert_notebook(notebook, outfile)
 	linter.process_file(outfile)
 
