@@ -19,6 +19,9 @@
 #                                                                              #
 ################################################################################
 
+# stdlib
+from typing import Dict, Tuple
+
 # 3rd party
 import astroid  # type: ignore
 import astroid.bases  # type: ignore
@@ -41,7 +44,7 @@ class BasicChecker(BaseChecker):
 
 	__implements__ = interfaces.IAstroidChecker
 
-	msgs = {
+	msgs: Dict[str, Tuple[str, str, str]] = {
 			"W0104": (
 					"Statement seems to have no effect",
 					"pointless-statement",
@@ -66,7 +69,7 @@ class BasicChecker(BaseChecker):
 	reports = ()
 
 	@utils.check_messages("pointless-statement", "pointless-string-statement", "expression-not-assigned")
-	def visit_expr(self, node):
+	def visit_expr(self, node) -> None:
 		"""Check for various kind of statements without effect"""
 		expr = node.value
 
@@ -108,6 +111,9 @@ class BasicChecker(BaseChecker):
 			self.add_message("pointless-statement", node=node)
 
 
-def register(linter):
-	"""required method to auto register this checker"""
+def register(linter) -> None:
+	"""
+	required method to auto register this checker
+	"""
+
 	linter.register_checker(BasicChecker(linter))

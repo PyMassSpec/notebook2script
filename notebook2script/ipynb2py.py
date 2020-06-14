@@ -33,7 +33,10 @@ from nbconvert import PythonExporter  # type: ignore
 py_exporter = PythonExporter()
 
 
-def convert_notebook(nb_file: Union[str, pathlib.Path], outfile: Union[str, pathlib.Path, os.PathLike]):
+def convert_notebook(
+		nb_file: Union[str, pathlib.Path],
+		outfile: Union[str, pathlib.Path, os.PathLike],
+		):
 	"""
 	Convert a notebook to a python file
 

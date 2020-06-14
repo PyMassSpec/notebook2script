@@ -18,6 +18,7 @@
 #    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.                 #
 #                                                                              #
 ################################################################################
+
 # 3rd party
 from pylint.checkers.base_checker import BaseChecker, BaseTokenChecker  # type: ignore
 from pylint.utils import register_plugins  # type: ignore
