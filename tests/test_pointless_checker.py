@@ -28,15 +28,15 @@ np.arange(start=1, stop=10, step=3)
 np.arange(start=1, stop=10)
 
 np.arange(
-	start=1, 
-	stop=10, 
-	step=1,
+	start=1,
+	stop=10,
+	step=1
 	)
 
 np.arange(
 	start=1, stop=10, step=1
 	)
-	
+
 data = np.arange(10)
 data
 
@@ -59,15 +59,15 @@ np.arange(start=1, stop=10, step=3)
 np.arange(start=1, stop=10)
 
 np.arange(
-	start=1, 
-	stop=10, 
-	step=1,
+	start=1,
+	stop=10,
+	step=1
 	)
 
 np.arange(
 	start=1, stop=10, step=1
 	)
-	
+
 data = np.arange(10)
 print(data)
 """

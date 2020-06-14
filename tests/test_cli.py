@@ -25,7 +25,7 @@ def test_cli_backend():
 # This file exists to test that notebook2script operates correctly
 # ------------------
 # The Jupyter logo should appear below
-# <img width='250px' align='left' src='http://jupyter.org/assets/try/jupyter.png'> 
+# <img width='250px' align='left' src='http://jupyter.org/assets/try/jupyter.png'>
 # In[1]:
 print("hello world")
 # Let's start with some basic numerical operations.
