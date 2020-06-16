@@ -35,7 +35,7 @@ notebook2script
 	:target: https://requires.io/github/domdfcoding/notebook2script/requirements/?branch=master
 	:alt: Requirements Status
 
-.. |coveralls| image:: https://shields.io/coveralls/github/domdfcoding/notebook2script/master?logo=coveralls
+.. |coveralls| image:: https://img.shields.io/coveralls/github/domdfcoding/notebook2script/master?logo=coveralls
 	:target: https://coveralls.io/github/domdfcoding/notebook2script?branch=master
 	:alt: Coverage
 

@@ -52,3 +52,7 @@ classifiers:
   - "Topic :: Software Development"
   - "Topic :: Utilities"
 
+keywords:
+  - jupyter-notebook
+  - utility
+  - converter

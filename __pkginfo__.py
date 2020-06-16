@@ -89,7 +89,8 @@ classifiers = [
 		'Programming Language :: Python :: 3.8',
 		'Programming Language :: Python',
 		'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
+		'Typing :: Typed',
 
 		]
 
-keywords = ""
+keywords = "jupyter-notebook utility converter"
