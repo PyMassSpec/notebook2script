@@ -90,6 +90,8 @@ classifiers = [
 		'Programming Language :: Python',
 		'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
 		'Typing :: Typed',
+		'Operating System :: Microsoft :: Windows',
+		'Operating System :: MacOS',
 
 		]
 
