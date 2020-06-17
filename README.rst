@@ -17,8 +17,7 @@ notebook2script
 	* - Docs
 	  - |docs| |docs_check|
 	* - Tests
-	  - |travis| |actions_windows| |actions_macos|
-	    |coveralls| |codefactor|
+	  - |travis| |actions_windows| |actions_macos| |coveralls| |codefactor|
 	* - PyPI
 	  - |pypi-version| |supported-versions| |supported-implementations| |wheel|
 	* - Activity
@@ -41,7 +40,7 @@ notebook2script
 .. |actions_windows| image:: https://github.com/domdfcoding/notebook2script/workflows/Windows%20Tests/badge.svg
 	:target: https://github.com/domdfcoding/notebook2script/actions?query=workflow%3A%22Windows+Tests%22
 	:alt: Windows Tests Status
-	
+
 .. |actions_macos| image:: https://github.com/domdfcoding/notebook2script/workflows/macOS%20Tests/badge.svg
 	:target: https://github.com/domdfcoding/notebook2script/actions?query=workflow%3A%22macOS+Tests%22
 	:alt: macOS Tests Status
