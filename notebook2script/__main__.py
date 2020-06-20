@@ -42,16 +42,16 @@ def main() -> None:
 	# inadvertently import user code from modules having the same name as
 	# stdlib or pylint's own modules.
 	# CPython issue: https://bugs.python.org/issue33053
-	if sys.path[0] == "" or sys.path[0] == os.getcwd():
+	if sys.path[0] == '' or sys.path[0] == os.getcwd():
 		sys.path.pop(0)
 
-	parser = argparse.ArgumentParser(description='Convert Jupyter Notebooks to Python scripts')
+	parser = argparse.ArgumentParser(description="Convert Jupyter Notebooks to Python scripts")
 
-	parser.add_argument('notebooks', metavar="NOTEBOOK", type=str, nargs='+', help='The notebooks to convert')
+	parser.add_argument("notebooks", metavar="NOTEBOOK", type=str, nargs='+', help="The notebooks to convert")
 	parser.add_argument(
-		"-o", '--outdir', type=pathlib.Path, default=pathlib.Path.cwd(),
-		help='Directory to save the output scripts in.')  # yapf: disable
-	parser.add_argument("-f", '--overwrite', action='store_true', help="Overwrite existing files.")
+		"-o", "--outdir", type=pathlib.Path, default=pathlib.Path.cwd(),
+		help="Directory to save the output scripts in.")  # yapf: disable
+	parser.add_argument("-f", "--overwrite", action="store_true", help="Overwrite existing files.")
 
 	args = parser.parse_args()
 
@@ -118,7 +118,7 @@ def process_notebook(notebook, outfile: Union[str, pathlib.Path, os.PathLike]) -
 	linter.process_file(outfile)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 	try:
 		main()
 	except KeyboardInterrupt:

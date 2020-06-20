@@ -52,5 +52,5 @@ def convert_notebook(
 	if not outfile.parent.is_dir():
 		outfile.parent.mkdir(parents=True)
 
-	with outfile.open("w") as fp:
+	with outfile.open('w') as fp:
 		fp.write(script)

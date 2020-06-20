@@ -210,10 +210,10 @@ class Pointless(PyLinter):
 
 		if file_lines[-1]:
 			# ensure there's a newline at the end
-			file_lines.append("")
+			file_lines.append('')
 
 		# print("\n".join(file_lines))
-		filename.write_text("\n".join(file_lines))
+		filename.write_text('\n'.join(file_lines))
 
 	def add_message(self, msgid, line=None, node=None, args=None, confidence=None, col_offset=None):
 		"""Adds a message given by ID or name.

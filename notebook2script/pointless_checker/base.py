@@ -59,7 +59,7 @@ class BasicChecker(BaseChecker):
 					"those strings as documentation, instead of comments.",
 					),
 			"W0106": (
-					'Expression "%s" is assigned to nothing',
+					"Expression '%s' is assigned to nothing",
 					"expression-not-assigned",
 					"Used when an expression that is not a function call is assigned "
 					"to nothing. Probably something else was intended.",
