@@ -77,21 +77,21 @@ extras_require = {'all': []}
 
 classifiers = [
 		'Development Status :: 4 - Beta',
+		'Environment :: Console',
 		'Intended Audience :: Developers',
 		'Intended Audience :: End Users/Desktop',
-		'Environment :: Console',
+		'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
+		'Operating System :: OS Independent',
 		'Operating System :: POSIX :: Linux',
+		'Programming Language :: Python',
 		'Programming Language :: Python :: 3 :: Only',
-		'Topic :: Software Development',
-		'Topic :: Utilities',
 		'Programming Language :: Python :: 3.6',
-		'Programming Language :: Python :: Implementation :: CPython',
 		'Programming Language :: Python :: 3.7',
 		'Programming Language :: Python :: 3.8',
-		'Programming Language :: Python',
-		'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
+		'Programming Language :: Python :: Implementation :: CPython',
+		'Topic :: Software Development',
+		'Topic :: Utilities',
 		'Typing :: Typed',
-		'Operating System :: OS Independent',
 
 		]
 
