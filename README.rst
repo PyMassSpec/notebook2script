@@ -8,7 +8,7 @@ notebook2script
 
 .. end short_desc
 
-.. start shields 
+.. start shields
 
 .. list-table::
 	:stub-columns: 1
@@ -28,7 +28,7 @@ notebook2script
 .. |docs| image:: https://img.shields.io/readthedocs/notebook2script/latest?logo=read-the-docs
 	:target: https://notebook2script.readthedocs.io/en/latest/?badge=latest
 	:alt: Documentation Status
-	
+
 .. |docs_check| image:: https://github.com/domdfcoding/notebook2script/workflows/Docs%20Check/badge.svg
 	:target: https://github.com/domdfcoding/notebook2script/actions?query=workflow%3A%22Docs+Check%22
 	:alt: Docs Check Status
@@ -61,7 +61,7 @@ notebook2script
 	:target: https://pypi.org/project/notebook2script/
 	:alt: PyPI - Package Version
 
-.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/notebook2script
+.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/notebook2script?logo=python&logoColor=white
 	:target: https://pypi.org/project/notebook2script/
 	:alt: PyPI - Supported Python Versions
 
@@ -74,8 +74,8 @@ notebook2script
 	:alt: PyPI - Wheel
 
 .. |license| image:: https://img.shields.io/github/license/domdfcoding/notebook2script
-	:alt: License
 	:target: https://github.com/domdfcoding/notebook2script/blob/master/LICENSE
+	:alt: License
 
 .. |language| image:: https://img.shields.io/github/languages/top/domdfcoding/notebook2script
 	:alt: GitHub top language
