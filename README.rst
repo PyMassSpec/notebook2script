@@ -116,4 +116,3 @@ To install with ``conda``:
 
 	$ conda config --add channels http://conda.anaconda.org/domdfcoding
 	$ conda install pkgname
-
