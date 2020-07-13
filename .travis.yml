@@ -1,4 +1,5 @@
 # This file is managed by `repo_helper`. Don't edit it directly
+---
 
 language: python
 dist: xenial
@@ -41,15 +42,3 @@ jobs:
           secure:
         distributions: "sdist bdist_wheel"
         skip_existing: true
-
-
-    - stage: deploy_releases
-      python: "3.6"
-      install:
-        - pip install PyGithub requests
-      script: skip
-      deploy:
-        on:
-          repo: domdfcoding/notebook2script
-        provider: script
-        script: python .ci/copy_pypi_2_github.py || return 1;

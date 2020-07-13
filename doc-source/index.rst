@@ -23,7 +23,7 @@ notebook2script
 	* - Activity
 	  - |commits-latest| |commits-since| |maintained|
 	* - Other
-	  - |license| |language| |requires|
+	  - |license| |language| |requires| |pre_commit|
 
 .. |docs| image:: https://img.shields.io/readthedocs/notebook2script/latest?logo=read-the-docs
 	:target: https://notebook2script.readthedocs.io/en/latest/?badge=latest
@@ -90,6 +90,10 @@ notebook2script
 
 .. |maintained| image:: https://img.shields.io/maintenance/yes/2020
 	:alt: Maintenance
+
+.. |pre_commit| image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+	:target: https://github.com/pre-commit/pre-commit
+	:alt: pre-commit
 
 .. end shields
 

@@ -50,7 +50,7 @@ pypi_name = "notebook2script"
 import_name = "notebook2script"
 py_modules = []
 entry_points = {
-		"console_scripts": ['notebook2script = notebook2script.__main__:main']
+		"console_scripts": ['notebook2script = notebook2script.__main__:main'],
 		}
 
 __license__ = "GNU General Public License v2 (GPLv2)"
