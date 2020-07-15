@@ -19,8 +19,6 @@ __all__ = [
 		"__version__",
 		"modname",
 		"pypi_name",
-		"py_modules",
-		"entry_points",
 		"__license__",
 		"__author__",
 		"short_desc",
@@ -29,13 +27,11 @@ __all__ = [
 		"github_username",
 		"web",
 		"github_url",
-		"project_urls",
 		"repo_root",
-		"long_description",
 		"install_requires",
 		"extras_require",
-		"classifiers",
-		"keywords",
+		"project_urls",
+
 		"import_name",
 		]
 
@@ -44,55 +40,23 @@ __copyright__ = """
 """
 
 __version__ = "0.0.0"
-
 modname = "notebook2script"
 pypi_name = "notebook2script"
 import_name = "notebook2script"
-py_modules = []
-entry_points = {
-		"console_scripts": ['notebook2script = notebook2script.__main__:main'],
-		}
-
 __license__ = "GNU General Public License v2 (GPLv2)"
-
 short_desc = "Convert Jupyter Notebooks to Python Scripts"
-
 __author__ = author = "Dominic Davis-Foster"
 author_email = "dominic@davis-foster.co.uk"
 github_username = "domdfcoding"
-web = github_url = f"https://github.com/domdfcoding/notebook2script"
-project_urls = {
-		"Documentation": f"https://notebook2script.readthedocs.io",
-		"Issue Tracker": f"{github_url}/issues",
-		"Source Code": github_url,
-		}
-
+web = github_url = "https://github.com/domdfcoding/notebook2script"
 repo_root = pathlib.Path(__file__).parent
-
-# Get info from files; set: long_description
-long_description = (repo_root / "README.rst").read_text(encoding="utf-8").replace("0.0.0", __version__) + '\n'
-
 install_requires = (repo_root / "requirements.txt").read_text(encoding="utf-8").split('\n')
 extras_require = {'all': []}
 
-classifiers = [
-		'Development Status :: 4 - Beta',
-		'Environment :: Console',
-		'Intended Audience :: Developers',
-		'Intended Audience :: End Users/Desktop',
-		'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
-		'Operating System :: OS Independent',
-		'Operating System :: POSIX :: Linux',
-		'Programming Language :: Python',
-		'Programming Language :: Python :: 3 :: Only',
-		'Programming Language :: Python :: 3.6',
-		'Programming Language :: Python :: 3.7',
-		'Programming Language :: Python :: 3.8',
-		'Programming Language :: Python :: Implementation :: CPython',
-		'Topic :: Software Development',
-		'Topic :: Utilities',
-		'Typing :: Typed',
 
-		]
 
-keywords = "jupyter-notebook utility converter"
+project_urls = {
+		"Documentation": "https://notebook2script.readthedocs.io",
+		"Issue Tracker": f"{github_url}/issues",
+		"Source Code": github_url,
+		}
