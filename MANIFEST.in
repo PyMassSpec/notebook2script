@@ -2,5 +2,5 @@ include __pkginfo__.py
 include LICENSE
 include requirements.txt
 recursive-exclude **/__pycache__ *
-recursive-include notebook2script/ *.pyi
+recursive-include notebook2script *.pyi
 include notebook2script/py.typed
