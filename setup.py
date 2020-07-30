@@ -15,7 +15,7 @@ from __pkginfo__ import *  # pylint: disable=wildcard-import
 
 
 setup(
-		description="Convert Jupyter Notebooks to Python Scripts",
+		description='Convert Jupyter Notebooks to Python Scripts',
 		extras_require=extras_require,
 		install_requires=install_requires,
 		py_modules=[],
