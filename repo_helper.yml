@@ -5,10 +5,11 @@ email: "dominic@davis-foster.co.uk"
 version: "0.0.0"
 username: "domdfcoding"
 license: 'GPLv2'
-short_desc: 'Convert Jupyter Notebooks to Python Scripts'
+short_desc: 'Convert Jupyter Notebooks to Python Scripts.'
 conda_description: 'Convert Jupyter Notebooks to Python Scripts'
 
 enable_conda: False
+enable_docs: False
 
 conda_channels:
   - conda-forge
