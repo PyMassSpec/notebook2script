@@ -1,21 +1,23 @@
-################################################################################
-#                                                                              #
-#    Copyright (C) 2020 Dominic Davis-Foster                                   #
-#                                                                              #
-#    This program is free software; you can redistribute it and/or modify      #
-#    it under the terms of the GNU General Public License version 2 as         #
-#    published by the Free Software Foundation.                                #
-#                                                                              #
-#    This program is distributed in the hope that it will be useful,           #
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of            #
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the             #
-#    GNU General Public License for more details.                              #
-#                                                                              #
-#    You should have received a copy of the GNU General Public License         #
-#    along with this program; if not, write to the Free Software               #
-#    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.                 #
-#                                                                              #
-################################################################################
+#!/usr/bin/env python3
+#
+#  __main__.py
+#
+#  Copyright © 2020 Dominic Davis-Foster <dominic@davis-foster.co.uk>
+#
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License version 2
+#  as published by the Free Software Foundation.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+#  MA 02110-1301, USA.
+#
 
 # stdlib
 import argparse
@@ -30,20 +32,12 @@ from typing import Iterable, Union
 from notebook2script.ipynb2py import convert_notebook
 from notebook2script.pointless import Pointless
 
-sys.path.append("..")
-sys.path.append("../..")
+__all__ = ["main", "process_multiple_notebooks", "process_notebook"]
 
 linter = Pointless()
 
 
 def main() -> None:
-	# Strip out the current working directory from sys.path.
-	# Having the working directory in `sys.path` means that `pylint` might
-	# inadvertently import user code from modules having the same name as
-	# stdlib or pylint's own modules.
-	# CPython issue: https://bugs.python.org/issue33053
-	if sys.path[0] == '' or sys.path[0] == os.getcwd():
-		sys.path.pop(0)
 
 	parser = argparse.ArgumentParser(description="Convert Jupyter Notebooks to Python scripts")
 

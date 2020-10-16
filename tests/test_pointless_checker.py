@@ -6,17 +6,13 @@ import tempfile
 from notebook2script.pointless import Pointless
 
 
-def test_pointless_checker():
+def test_pointless_checker(tmp_path):
+	# Make a file with some "pointless" statements
 
-	with tempfile.TemporaryDirectory() as tmpdir:
-		tmpdir = pathlib.Path(tmpdir)
+	outfile = tmp_path / "test_script.py"
 
-		# Make a file with some "pointless" statements
-
-		outfile = tmpdir / "test_script.py"
-
-		outfile.write_text(
-				"""\
+	outfile.write_text(
+			"""\
 #!/use/bin/python3
 
 # Based on https://realpython.com/how-to-use-numpy-arange/
@@ -41,13 +37,13 @@ data = np.arange(10)
 data
 
 """
-				)
+			)
 
-		linter = Pointless()
+	linter = Pointless()
 
-		linter.process_file(outfile)
+	linter.process_file(outfile)
 
-		assert outfile.read_text() == """\
+	assert outfile.read_text() == """\
 #!/use/bin/python3
 
 # Based on https://realpython.com/how-to-use-numpy-arange/

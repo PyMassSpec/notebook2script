@@ -30,6 +30,8 @@ from pylint import interfaces  # type: ignore
 from pylint.checkers import utils  # type: ignore
 from pylint.checkers.base_checker import BaseChecker  # type: ignore
 
+__all__ = ["BasicChecker", "register"]
+
 
 class BasicChecker(BaseChecker):
 	"""checks for :

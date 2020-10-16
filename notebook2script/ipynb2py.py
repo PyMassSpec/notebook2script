@@ -30,6 +30,8 @@ from typing import Union
 # 3rd party
 from nbconvert import PythonExporter  # type: ignore
 
+__all__ = ["convert_notebook"]
+
 py_exporter = PythonExporter()
 
 
@@ -38,7 +40,7 @@ def convert_notebook(
 		outfile: Union[str, pathlib.Path, os.PathLike],
 		):
 	"""
-	Convert a notebook to a python file
+	Convert a notebook to a python file.
 
 	:param nb_file: Filename of the Jupyter Notebook to convert
 	:param outfile: Filename to save the output script as

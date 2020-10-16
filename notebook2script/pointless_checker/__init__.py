@@ -29,7 +29,7 @@ def initialize(linter):
 	Initialize linter with checkers in this package
 	"""
 
-	register_plugins(linter, __path__[0])
+	register_plugins(linter, __path__[0])  # type: ignore
 
 
 __all__ = ("BaseChecker", "BaseTokenChecker", "initialize")

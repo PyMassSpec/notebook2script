@@ -150,6 +150,8 @@ from pylint.utils import utils  # type: ignore
 # this package
 from notebook2script import pointless_checker
 
+__all__ = ["Pointless", "fix_import_path"]
+
 
 class Pointless(PyLinter):
 	"""lint Python modules using external checkers.
@@ -253,6 +255,7 @@ def fix_import_path(args):
 	We avoid adding duplicate directories to sys.path.
 	`sys.path` is reset to its original value upon exiting this context.
 	"""
+
 	original = _patch_sys_path(args)
 	try:
 		yield
