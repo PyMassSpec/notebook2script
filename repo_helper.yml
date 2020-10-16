@@ -57,3 +57,7 @@ keywords:
   - jupyter-notebook
   - utility
   - converter
+
+manifest_additional:
+  - include notebook2script/isort.cfg
+  - include notebook2script/style.yapf

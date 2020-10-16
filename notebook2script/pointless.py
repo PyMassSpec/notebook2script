@@ -207,7 +207,7 @@ class Pointless(PyLinter):
 				line = file_lines[lineno]
 				line_pre_statement = line[:col]
 				line_post_statement = line[col + len(value):]
-				print(f"{line_pre_statement}print({value}){line_post_statement}")
+				# print(f"{line_pre_statement}print({value}){line_post_statement}")
 				file_lines[lineno] = f"{line_pre_statement}print({value}){line_post_statement}"
 
 		if file_lines[-1]:

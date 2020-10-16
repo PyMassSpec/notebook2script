@@ -84,7 +84,7 @@ def process_multiple_notebooks(
 	for notebook in notebooks:
 		all_notebooks += glob.glob(str(notebook))
 
-	print(all_notebooks)
+	# print(all_notebooks)
 	# input(">")
 
 	for notebook in all_notebooks:
