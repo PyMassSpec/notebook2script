@@ -44,7 +44,7 @@ modname = "notebook2script"
 pypi_name = "notebook2script"
 import_name = "notebook2script"
 __license__ = "GNU General Public License v2 (GPLv2)"
-short_desc = 'Convert Jupyter Notebooks to Python Scripts'
+short_desc = 'Convert Jupyter Notebooks to Python Scripts.'
 __author__ = author = 'Dominic Davis-Foster'
 author_email = 'dominic@davis-foster.co.uk'
 github_username = "domdfcoding"
