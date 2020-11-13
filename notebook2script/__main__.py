@@ -28,7 +28,7 @@ import sys
 from typing import Iterable, Union
 
 # 3rd party
-from pre_commit_hooks.fix_encoding_pragma import fix_encoding_pragma
+from pre_commit_hooks.fix_encoding_pragma import fix_encoding_pragma  # type: ignore
 
 # this package
 from notebook2script.ipynb2py import convert_notebook
