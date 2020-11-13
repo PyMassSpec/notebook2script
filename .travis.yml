@@ -57,6 +57,6 @@ jobs:
         provider: pypi
         username: "DomDF"
         password:
-          secure:
+          secure: d7OIxYIADEiUiezCXoI1zvQaVbjO0yzukfrxgGyA2cc4QjUQtGZMg3ftDpoKrzo+KxP4v72qcfRUexlGN6Snfgrbj1SmUvpzkXFSCl+xFnUqeCcg3jgq9oCnqyQP+NnWUPTth3DY6TkRmTyRq2I5FLJE6xBFgz0b8Cp1NpG7pXybpal2rL8AInnGnxZikiLplgarOJj8iOmFCkixVUdiM0usfW49HeLZBH19+3HgzjtMhbK9auhIYSi96UTd5JIYuODMSTPolprhLOmTDFWaKKJA4ECAPw1U4MB5N9aIoIyYPSN/GxGzXKJar5/dw5t3yyJf8CcygJE3SQnoibTEyGmSFdx/rhBKq+d7+X34ai9yRFKWlHeW4H5rF3I8bT2kqY3+0tKfD/ti7U/kzK8vVLpGUNrwR/vPA06rycGVMEzaE/lp0POzkb6fAKj72GjHBIHo2oqPvwSfUwTc45OeheavcEwQZWB7ZXnu3fq48PYzi+AP+1WRjmalniP1y4QhyboR78W8QdfilexSFOq8vgeNlZKJybN9yx4NWTwVoUAsn5mBshoN30wVsPObUn1Wt2xAlHEiSmV0tIYo6S5DjdUnQ85mz0MZvEfCQX0kWrJGekuBC0QhWuaSsVA+ocH6+EK0UNmy80G377G4QMsbOgFmQC0Fz9laIJSpm5xdok8=
         distributions: "sdist bdist_wheel"
         skip_existing: true
