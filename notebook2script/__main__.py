@@ -28,6 +28,9 @@ import sys
 import warnings
 from typing import Iterable, Union
 
+# 3rd party
+from pre_commit_hooks.fix_encoding_pragma import fix_encoding_pragma
+
 # this package
 from notebook2script.ipynb2py import convert_notebook
 from notebook2script.pointless import Pointless
@@ -110,6 +113,8 @@ def process_notebook(notebook, outfile: Union[str, pathlib.Path, os.PathLike]) -
 
 	convert_notebook(notebook, outfile)
 	linter.process_file(outfile)
+	with open(outfile, "r+b") as f:
+		fix_encoding_pragma(f, remove=True, expected_pragma=b"# coding: utf-8")
 
 
 if __name__ == "__main__":
