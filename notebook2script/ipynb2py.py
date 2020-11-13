@@ -22,7 +22,7 @@ Requires nbconvert (pip install nbconvert) and pandoc (apt-get install pandoc)
 #
 
 # 3rd party
-import isort
+import isort  # type: ignore
 import yapf_isort
 from domdf_python_tools.compat import importlib_resources
 from domdf_python_tools.paths import PathPlus
