@@ -72,7 +72,7 @@ notebook2script
 .. |language| image:: https://img.shields.io/github/languages/top/domdfcoding/notebook2script
 	:alt: GitHub top language
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/domdfcoding/notebook2script/v0.0.0
+.. |commits-since| image:: https://img.shields.io/github/commits-since/domdfcoding/notebook2script/v0.1.0
 	:target: https://github.com/domdfcoding/notebook2script/pulse
 	:alt: GitHub commits since tagged version
 
