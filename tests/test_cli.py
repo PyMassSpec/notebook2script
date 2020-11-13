@@ -49,7 +49,7 @@ type(3.0)
 type('3')
 # In[11]:
 print('3' + '3')
-""".split("\n"):
+""".split('\n'):
 		if not re.match(r"^#*\s*$", line):
 			continue
 		else:
@@ -57,7 +57,7 @@ print('3' + '3')
 
 	actual = []
 
-	for line in outfile.read_text().split("\n"):
+	for line in outfile.read_text().split('\n'):
 		if not re.match(r"^#*\s*$", line):
 			continue
 		else:

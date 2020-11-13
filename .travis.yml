@@ -1,6 +1,7 @@
 # This file is managed by 'repo_helper'. Don't edit it directly.
 ---
 
+os: linux
 language: python
 dist: focal
 cache: pip
@@ -32,7 +33,6 @@ stages:
 jobs:
   allow_failures:
     - arch: arm64
-
   exclude:
     - python: '3.7'
       arch: arm64
@@ -52,7 +52,7 @@ jobs:
           tags: true
           repo: domdfcoding/notebook2script
         provider: pypi
-        user: "DomDF"
+        username: "DomDF"
         password:
           secure:
         distributions: "sdist bdist_wheel"

@@ -72,7 +72,10 @@ class BasicChecker(BaseChecker):
 
 	@utils.check_messages("pointless-statement", "pointless-string-statement", "expression-not-assigned")
 	def visit_expr(self, node) -> None:
-		"""Check for various kind of statements without effect"""
+		"""
+		Check for various kinds of statements without effect.
+		"""
+
 		expr = node.value
 
 		if isinstance(expr, astroid.Const) and isinstance(expr.value, str):
