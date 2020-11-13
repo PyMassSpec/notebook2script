@@ -17,15 +17,14 @@ conda_channels:
 
 python_deploy_version: 3.6
 
-exclude_files:
-  - lint_roller
-  # Must not lint-roll tests
 
 # Versions to run tests for
 python_versions:
   - '3.6'
   - '3.7'
   - '3.8'
+  - '3.9'
+  - '3.10-dev'
 
 # travis secure password for PyPI
 travis_pypi_secure: ""
@@ -33,18 +32,12 @@ travis_pypi_secure: ""
 additional_ignore:
   - "tests/output/"
 
-# additional lines for MANIFEST.in
-#manifest_additional:
-#  -
 
 console_scripts:
   - "notebook2script = notebook2script.__main__:main"
 
 classifiers:
   - "Development Status :: 4 - Beta"
-#  - "Development Status :: 5 - Production/Stable"
-#  - "Development Status :: 6 - Mature"
-#  - "Development Status :: 7 - Inactive"
   - 'Intended Audience :: Developers'
   - "Intended Audience :: End Users/Desktop"
   - "Environment :: Console"
