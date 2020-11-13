@@ -41,7 +41,6 @@ classifiers:
   - "Intended Audience :: End Users/Desktop"
   - "Environment :: Console"
   - "Operating System :: POSIX :: Linux"
-  - "Programming Language :: Python :: 3 :: Only"
   - "Topic :: Software Development"
   - "Topic :: Utilities"
 
