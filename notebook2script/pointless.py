@@ -228,7 +228,7 @@ class Pointless(PyLinter):
 		"""
 
 		self.statements.append(node)
-		super().add_message(msgid, line, node, args, confidence, col_offset)
+		# super().add_message(msgid, line, node, args, confidence, col_offset)
 
 
 def _patch_sys_path(args):
