@@ -80,7 +80,7 @@ def test_process_multiple_notebooks(tmp_pathplus):
 
 def test_convert_notebook(tmp_pathplus):
 	notebook = tests_dir / "example_notebook.ipynb"
-	outfile = tmp_pathplus / "output/example_notebook.py"
+	outfile = tmp_pathplus / "output" / "example_notebook.py"
 	convert_notebook(notebook, outfile)
 	check_output(outfile)
 
@@ -96,8 +96,30 @@ def test_cli(tmp_pathplus):
 				args=[str(tests_dir / "example_notebook.ipynb"), "--outdir", str(outdir)],
 				)
 		assert result.exit_code == 0
-		assert result.stdout == dedent(f"""\
+		assert result.stdout == dedent(
+				f"""\
 			Converting {tests_dir}/example_notebook.ipynb to {tmp_pathplus}/output/example_notebook.py
-			""")
+			"""
+				)
+
+	check_output(outdir / "example_notebook.py")
+
+
+def test_cli_glob(tmp_pathplus):
+	outdir = tmp_pathplus / "output/"
+
+	with in_directory(tmp_pathplus):
+		runner = CliRunner()
+		result: Result = runner.invoke(
+				main,
+				catch_exceptions=False,
+				args=[str(tests_dir / "*.ipynb"), "--outdir", str(outdir)],
+				)
+		assert result.exit_code == 0
+		assert result.stdout == dedent(
+				f"""\
+			Converting {tests_dir}/example_notebook.ipynb to {tmp_pathplus}/output/example_notebook.py
+			"""
+				)
 
 	check_output(outdir / "example_notebook.py")
