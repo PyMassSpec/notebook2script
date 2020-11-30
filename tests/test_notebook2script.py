@@ -1,6 +1,7 @@
 # stdlib
 import pathlib
 import re
+from os.path import normpath
 from textwrap import dedent
 
 # 3rd party
@@ -93,12 +94,12 @@ def test_cli(tmp_pathplus):
 		result: Result = runner.invoke(
 				main,
 				catch_exceptions=False,
-				args=[str(tests_dir / "example_notebook.ipynb"), "--outdir", str(outdir)],
+				args=[normpath(tests_dir / "example_notebook.ipynb"), "--outdir", normpath(outdir)],
 				)
 		assert result.exit_code == 0
 		assert result.stdout == dedent(
 				f"""\
-			Converting {tests_dir}/example_notebook.ipynb to {tmp_pathplus}/output/example_notebook.py
+			Converting {normpath(tests_dir)}/example_notebook.ipynb to {normpath(tmp_pathplus)}/output/example_notebook.py
 			"""
 				)
 
@@ -113,12 +114,12 @@ def test_cli_glob(tmp_pathplus):
 		result: Result = runner.invoke(
 				main,
 				catch_exceptions=False,
-				args=[str(tests_dir / "*.ipynb"), "--outdir", str(outdir)],
+				args=[normpath(tests_dir / "*.ipynb"), "--outdir", normpath(outdir)],
 				)
 		assert result.exit_code == 0
 		assert result.stdout == dedent(
 				f"""\
-			Converting {tests_dir}/example_notebook.ipynb to {tmp_pathplus}/output/example_notebook.py
+			Converting {normpath(tests_dir)}/example_notebook.ipynb to {normpath(tmp_pathplus)}/output/example_notebook.py
 			"""
 				)
 
