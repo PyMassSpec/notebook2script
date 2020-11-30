@@ -97,10 +97,9 @@ def test_cli(tmp_pathplus):
 				args=[normpath(tests_dir / "example_notebook.ipynb"), "--outdir", normpath(outdir)],
 				)
 		assert result.exit_code == 0
-		assert result.stdout == dedent(
-				f"""\
-			Converting {normpath(tests_dir)}/example_notebook.ipynb to {normpath(tmp_pathplus)}/output/example_notebook.py
-			"""
+		assert result.stdout == (
+				f"Converting {normpath(tests_dir/'example_notebook.ipynb')} "
+				f"to {normpath(tmp_pathplus / 'output/example_notebook.py')}\n"
 				)
 
 	check_output(outdir / "example_notebook.py")
@@ -117,10 +116,9 @@ def test_cli_glob(tmp_pathplus):
 				args=[normpath(tests_dir / "*.ipynb"), "--outdir", normpath(outdir)],
 				)
 		assert result.exit_code == 0
-		assert result.stdout == dedent(
-				f"""\
-			Converting {normpath(tests_dir)}/example_notebook.ipynb to {normpath(tmp_pathplus)}/output/example_notebook.py
-			"""
+		assert result.stdout == (
+				f"Converting {normpath(tests_dir/'example_notebook.ipynb')} "
+				f"to {normpath(tmp_pathplus / 'output/example_notebook.py')}\n"
 				)
 
 	check_output(outdir / "example_notebook.py")
