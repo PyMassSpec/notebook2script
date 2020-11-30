@@ -14,6 +14,8 @@ notebook2script
 	:stub-columns: 1
 	:widths: 10 90
 
+	* - Docs
+	  - |docs| |docs_check|
 	* - Tests
 	  - |travis| |actions_windows| |actions_macos| |coveralls| |codefactor| |pre_commit_ci|
 	* - PyPI
@@ -23,10 +25,16 @@ notebook2script
 	* - Other
 	  - |license| |language| |requires| |pre_commit|
 
+.. |docs| image:: https://img.shields.io/readthedocs/notebook2script/latest?logo=read-the-docs
+	:target: https://notebook2script.readthedocs.io/en/latest/?badge=latest
+	:alt: Documentation Build Status
 
+.. |docs_check| image:: https://github.com/domdfcoding/notebook2script/workflows/Docs%20Check/badge.svg
+	:target: https://github.com/domdfcoding/notebook2script/actions?query=workflow%3A%22Docs+Check%22
+	:alt: Docs Check Status
 
 .. |travis| image:: https://github.com/domdfcoding/notebook2script/workflows/Linux%20Tests/badge.svg
-	:target: https://github.com/domdfcoding/notebook2script/actions?query=workflow%3A%Linux+Tests%22
+	:target: https://github.com/domdfcoding/notebook2script/actions?query=workflow%3A%22Linux+Tests%22
 	:alt: Linux Test Status
 
 .. |actions_windows| image:: https://github.com/domdfcoding/notebook2script/workflows/Windows%20Tests/badge.svg
