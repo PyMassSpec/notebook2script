@@ -9,7 +9,6 @@ short_desc: 'Convert Jupyter Notebooks to Python Scripts.'
 conda_description: 'Convert Jupyter Notebooks to Python Scripts'
 
 enable_conda: False
-enable_docs: False
 
 conda_channels:
   - conda-forge
@@ -49,3 +48,8 @@ keywords:
 manifest_additional:
   - include notebook2script/isort.cfg
   - include notebook2script/style.yapf
+
+standalone_contrib_guide: true
+sphinx_html_theme: furo
+
+extra_sphinx_extensions:
