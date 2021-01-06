@@ -1,10 +1,13 @@
+#!/usr/bin/env python3
+#
+#  pointless.py
 """
 Ensure pointless statements in scripts are converted
 into print function calls
-"""
-
+"""  # noqa: D400
+#
 #    Copyright (C) 2020 Dominic Davis-Foster
-
+#
 #    Based on pylint
 #    Copyright (c) 2006-2016 LOGILAB S.A. (Paris, FRANCE) <contact@logilab.fr>
 #    Copyright (c) 2008 Fabrice Douchant <Fabrice.Douchant@logilab.fr>
@@ -19,7 +22,6 @@ into print function calls
 #    Copyright (c) 2012 Kevin Jing Qiu <kevin.jing.qiu@gmail.com>
 #    Copyright (c) 2012-2014 Google, Inc.
 #    Copyright (c) 2013 buck@yelp.com <buck@yelp.com>
-#    Copyright (c) 2013-2014 Google, Inc.
 #    Copyright (c) 2013-2020 Claudiu Popa <pcmanticore@gmail.com>
 #    Copyright (c) 2014 Alexandru Coman <fcoman@bitdefender.com>
 #    Copyright (c) 2014 Arun Persaud <arun@nubati.net>
@@ -154,6 +156,9 @@ __all__ = ["Pointless", "fix_import_path"]
 
 
 class Pointless(PyLinter):
+	"""
+	Checker for pointless statements.
+	"""
 
 	def __init__(self):
 		super().__init__()
@@ -162,7 +167,7 @@ class Pointless(PyLinter):
 		self.initialize()
 		self.statements = []
 
-	def load_default_plugins(self):
+	def load_default_plugins(self):  # noqa: D102
 		pointless_checker.initialize(self)
 		reporters.initialize(self)
 		# Make sure to load the default reporter, because
@@ -170,7 +175,7 @@ class Pointless(PyLinter):
 		if not self.reporter:
 			self._load_reporter()
 
-	def process_file(self, filename):
+	def process_file(self, filename):  # noqa: D102
 		self.statements = []
 
 		with fix_import_path([filename]):

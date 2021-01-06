@@ -1,23 +1,28 @@
-################################################################################
-#                                                                              #
-#    Copyright (C) 2020 Dominic Davis-Foster                                   #
-#    Based on pylint                                                           #
-#    See notebook2script/pointless.py for full copyright information           #
-#                                                                              #
-#    This program is free software; you can redistribute it and/or modify      #
-#    it under the terms of the GNU General Public License version 2 as         #
-#    published by the Free Software Foundation.                                #
-#                                                                              #
-#    This program is distributed in the hope that it will be useful,           #
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of            #
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the             #
-#    GNU General Public License for more details.                              #
-#                                                                              #
-#    You should have received a copy of the GNU General Public License         #
-#    along with this program; if not, write to the Free Software               #
-#    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.                 #
-#                                                                              #
-################################################################################
+#!/usr/bin/env python3
+#
+#  base.py
+"""
+Checker for pointless statements.
+"""
+#
+#  Copyright © 2020-2021 Dominic Davis-Foster <dominic@davis-foster.co.uk>
+#  Based on pylint
+#  See notebook2script/pointless.py for full copyright information
+#
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License version 2
+#  as published by the Free Software Foundation.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+#  MA 02110-1301, USA.
+#
 
 # stdlib
 from typing import Dict, Tuple
@@ -33,16 +38,7 @@ from pylint.checkers.base_checker import BaseChecker  # type: ignore
 __all__ = ["BasicChecker", "register"]
 
 
-class BasicChecker(BaseChecker):
-	"""checks for :
-	* doc strings
-	* number of arguments, local variables, branches, returns and statements in
-	functions, methods
-	* required module attributes
-	* dangerous default values as arguments
-	* redefinition of function / method / class
-	* uses of the global statement
-	"""
+class BasicChecker(BaseChecker):  # noqa: D101
 
 	__implements__ = interfaces.IAstroidChecker
 
@@ -118,7 +114,7 @@ class BasicChecker(BaseChecker):
 
 def register(linter) -> None:
 	"""
-	required method to auto register this checker
+	Required function to auto register this checker.
 	"""
 
 	linter.register_checker(BasicChecker(linter))

@@ -5,7 +5,7 @@
 Convert Jupyter Notebooks to Python Scripts.
 """
 #
-#  Copyright © 2020 Dominic Davis-Foster <dominic@davis-foster.co.uk>
+#  Copyright © 2020-2021 Dominic Davis-Foster <dominic@davis-foster.co.uk>
 #
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License version 2
@@ -40,7 +40,7 @@ from pre_commit_hooks.fix_encoding_pragma import fix_encoding_pragma  # type: ig
 from notebook2script.pointless import Pointless
 
 __author__: str = "Dominic Davis-Foster"
-__copyright__: str = "2020 Dominic Davis-Foster"
+__copyright__: str = "2020-2021 Dominic Davis-Foster"
 __license__: str = "GPLv2"
 __version__: str = "0.2.0"
 __email__: str = "dominic@davis-foster.co.uk"
