@@ -4,7 +4,9 @@
 """
 Ensure pointless statements in scripts are converted
 into print function calls
-"""  # noqa: D400
+"""
+
+  # noqa: D400
 #
 #    Copyright (C) 2020 Dominic Davis-Foster
 #
