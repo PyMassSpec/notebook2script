@@ -1,4 +1,4 @@
-astroid>=2.4.0,<2.6
+astroid<2.6,>=2.4.0
 click>=7.1.2
 consolekit>=0.6.0
 domdf-python-tools>=1.0.0
