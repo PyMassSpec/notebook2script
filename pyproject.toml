@@ -1,3 +1,26 @@
 [build-system]
 requires = [ "setuptools>=40.6.0", "wheel>=0.34.2",]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "notebook2script"
+version = "0.2.0"
+description = "Convert Jupyter Notebooks to Python Scripts."
+readme = "README.rst"
+keywords = [ "jupyter-notebook", "utility", "converter",]
+dynamic = [ "requires-python", "classifiers", "dependencies",]
+[[project.authors]]
+email = "dominic@davis-foster.co.uk"
+name = "Dominic Davis-Foster"
+
+[project.license]
+file = "LICENSE"
+
+[project.urls]
+Homepage = "https://github.com/domdfcoding/notebook2script"
+"Issue Tracker" = "https://github.com/domdfcoding/notebook2script/issues"
+"Source Code" = "https://github.com/domdfcoding/notebook2script"
+Documentation = "https://notebook2script.readthedocs.io/en/latest"
+
+[project.scripts]
+notebook2script = "notebook2script.__main__:main"
