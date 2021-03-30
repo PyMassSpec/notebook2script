@@ -31,40 +31,40 @@ notebook2script
 	:target: https://notebook2script.readthedocs.io/en/latest
 	:alt: Documentation Build Status
 
-.. |docs_check| image:: https://github.com/domdfcoding/notebook2script/workflows/Docs%20Check/badge.svg
-	:target: https://github.com/domdfcoding/notebook2script/actions?query=workflow%3A%22Docs+Check%22
+.. |docs_check| image:: https://github.com/PyMassSpec/notebook2script/workflows/Docs%20Check/badge.svg
+	:target: https://github.com/PyMassSpec/notebook2script/actions?query=workflow%3A%22Docs+Check%22
 	:alt: Docs Check Status
 
-.. |actions_linux| image:: https://github.com/domdfcoding/notebook2script/workflows/Linux/badge.svg
-	:target: https://github.com/domdfcoding/notebook2script/actions?query=workflow%3A%22Linux%22
+.. |actions_linux| image:: https://github.com/PyMassSpec/notebook2script/workflows/Linux/badge.svg
+	:target: https://github.com/PyMassSpec/notebook2script/actions?query=workflow%3A%22Linux%22
 	:alt: Linux Test Status
 
-.. |actions_windows| image:: https://github.com/domdfcoding/notebook2script/workflows/Windows/badge.svg
-	:target: https://github.com/domdfcoding/notebook2script/actions?query=workflow%3A%22Windows%22
+.. |actions_windows| image:: https://github.com/PyMassSpec/notebook2script/workflows/Windows/badge.svg
+	:target: https://github.com/PyMassSpec/notebook2script/actions?query=workflow%3A%22Windows%22
 	:alt: Windows Test Status
 
-.. |actions_macos| image:: https://github.com/domdfcoding/notebook2script/workflows/macOS/badge.svg
-	:target: https://github.com/domdfcoding/notebook2script/actions?query=workflow%3A%22macOS%22
+.. |actions_macos| image:: https://github.com/PyMassSpec/notebook2script/workflows/macOS/badge.svg
+	:target: https://github.com/PyMassSpec/notebook2script/actions?query=workflow%3A%22macOS%22
 	:alt: macOS Test Status
 
-.. |actions_flake8| image:: https://github.com/domdfcoding/notebook2script/workflows/Flake8/badge.svg
-	:target: https://github.com/domdfcoding/notebook2script/actions?query=workflow%3A%22Flake8%22
+.. |actions_flake8| image:: https://github.com/PyMassSpec/notebook2script/workflows/Flake8/badge.svg
+	:target: https://github.com/PyMassSpec/notebook2script/actions?query=workflow%3A%22Flake8%22
 	:alt: Flake8 Status
 
-.. |actions_mypy| image:: https://github.com/domdfcoding/notebook2script/workflows/mypy/badge.svg
-	:target: https://github.com/domdfcoding/notebook2script/actions?query=workflow%3A%22mypy%22
+.. |actions_mypy| image:: https://github.com/PyMassSpec/notebook2script/workflows/mypy/badge.svg
+	:target: https://github.com/PyMassSpec/notebook2script/actions?query=workflow%3A%22mypy%22
 	:alt: mypy status
 
-.. |requires| image:: https://requires.io/github/domdfcoding/notebook2script/requirements.svg?branch=master
-	:target: https://requires.io/github/domdfcoding/notebook2script/requirements/?branch=master
+.. |requires| image:: https://requires.io/github/PyMassSpec/notebook2script/requirements.svg?branch=master
+	:target: https://requires.io/github/PyMassSpec/notebook2script/requirements/?branch=master
 	:alt: Requirements Status
 
-.. |coveralls| image:: https://img.shields.io/coveralls/github/domdfcoding/notebook2script/master?logo=coveralls
-	:target: https://coveralls.io/github/domdfcoding/notebook2script?branch=master
+.. |coveralls| image:: https://img.shields.io/coveralls/github/PyMassSpec/notebook2script/master?logo=coveralls
+	:target: https://coveralls.io/github/PyMassSpec/notebook2script?branch=master
 	:alt: Coverage
 
-.. |codefactor| image:: https://img.shields.io/codefactor/grade/github/domdfcoding/notebook2script?logo=codefactor
-	:target: https://www.codefactor.io/repository/github/domdfcoding/notebook2script
+.. |codefactor| image:: https://img.shields.io/codefactor/grade/github/PyMassSpec/notebook2script?logo=codefactor
+	:target: https://www.codefactor.io/repository/github/PyMassSpec/notebook2script
 	:alt: CodeFactor Grade
 
 .. |pypi-version| image:: https://img.shields.io/pypi/v/notebook2script
@@ -83,19 +83,19 @@ notebook2script
 	:target: https://pypi.org/project/notebook2script/
 	:alt: PyPI - Wheel
 
-.. |license| image:: https://img.shields.io/github/license/domdfcoding/notebook2script
-	:target: https://github.com/domdfcoding/notebook2script/blob/master/LICENSE
+.. |license| image:: https://img.shields.io/github/license/PyMassSpec/notebook2script
+	:target: https://github.com/PyMassSpec/notebook2script/blob/master/LICENSE
 	:alt: License
 
-.. |language| image:: https://img.shields.io/github/languages/top/domdfcoding/notebook2script
+.. |language| image:: https://img.shields.io/github/languages/top/PyMassSpec/notebook2script
 	:alt: GitHub top language
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/domdfcoding/notebook2script/v0.2.0
-	:target: https://github.com/domdfcoding/notebook2script/pulse
+.. |commits-since| image:: https://img.shields.io/github/commits-since/PyMassSpec/notebook2script/v0.2.0
+	:target: https://github.com/PyMassSpec/notebook2script/pulse
 	:alt: GitHub commits since tagged version
 
-.. |commits-latest| image:: https://img.shields.io/github/last-commit/domdfcoding/notebook2script
-	:target: https://github.com/domdfcoding/notebook2script/commit/master
+.. |commits-latest| image:: https://img.shields.io/github/last-commit/PyMassSpec/notebook2script
+	:target: https://github.com/PyMassSpec/notebook2script/commit/master
 	:alt: GitHub last commit
 
 .. |maintained| image:: https://img.shields.io/maintenance/yes/2021
@@ -105,8 +105,8 @@ notebook2script
 	:target: https://pypi.org/project/notebook2script/
 	:alt: PyPI - Downloads
 
-.. |pre_commit_ci| image:: https://results.pre-commit.ci/badge/github/domdfcoding/notebook2script/master.svg
-	:target: https://results.pre-commit.ci/latest/github/domdfcoding/notebook2script/master
+.. |pre_commit_ci| image:: https://results.pre-commit.ci/badge/github/PyMassSpec/notebook2script/master.svg
+	:target: https://results.pre-commit.ci/latest/github/PyMassSpec/notebook2script/master
 	:alt: pre-commit.ci status
 
 .. end shields

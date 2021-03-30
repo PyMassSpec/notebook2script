@@ -9,17 +9,19 @@ description = "Convert Jupyter Notebooks to Python Scripts."
 readme = "README.rst"
 keywords = [ "jupyter-notebook", "utility", "converter",]
 dynamic = [ "requires-python", "classifiers", "dependencies",]
+
 [[project.authors]]
 email = "dominic@davis-foster.co.uk"
 name = "Dominic Davis-Foster"
+
 
 [project.license]
 file = "LICENSE"
 
 [project.urls]
-Homepage = "https://github.com/domdfcoding/notebook2script"
-"Issue Tracker" = "https://github.com/domdfcoding/notebook2script/issues"
-"Source Code" = "https://github.com/domdfcoding/notebook2script"
+Homepage = "https://github.com/PyMassSpec/notebook2script"
+"Issue Tracker" = "https://github.com/PyMassSpec/notebook2script/issues"
+"Source Code" = "https://github.com/PyMassSpec/notebook2script"
 Documentation = "https://notebook2script.readthedocs.io/en/latest"
 
 [project.scripts]

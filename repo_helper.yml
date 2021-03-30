@@ -3,7 +3,9 @@ copyright_years: "2020-2021"
 author: "Dominic Davis-Foster"
 email: "dominic@davis-foster.co.uk"
 version: "0.2.0"
-username: "domdfcoding"
+username: "PyMassSpec"
+assignee: "domdfcoding"
+primary_conda_channel: "domdfcoding"
 license: 'GPLv2'
 short_desc: 'Convert Jupyter Notebooks to Python Scripts.'
 conda_description: 'Convert Jupyter Notebooks to Python Scripts'
