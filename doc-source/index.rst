@@ -146,6 +146,6 @@ Installation
 
 	View the :ref:`Function Index <genindex>` or browse the `Source Code <_modules/index.html>`__.
 
-	`Browse the GitHub Repository <https://github.com/domdfcoding/notebook2script>`__
+	`Browse the GitHub Repository <https://github.com/PyMassSpec/notebook2script>`__
 
 .. end links
