@@ -10,12 +10,12 @@ license: 'GPLv2'
 short_desc: 'Convert Jupyter Notebooks to Python Scripts.'
 conda_description: 'Convert Jupyter Notebooks to Python Scripts'
 
+python_deploy_version: 3.6
 enable_conda: False
+mypy_version: "0.812"
 
 conda_channels:
   - conda-forge
-
-python_deploy_version: 3.6
 
 # Versions to run tests for
 python_versions:
