@@ -90,7 +90,7 @@ notebook2script
 .. |language| image:: https://img.shields.io/github/languages/top/PyMassSpec/notebook2script
 	:alt: GitHub top language
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/PyMassSpec/notebook2script/v0.2.0
+.. |commits-since| image:: https://img.shields.io/github/commits-since/PyMassSpec/notebook2script/v0.2.1
 	:target: https://github.com/PyMassSpec/notebook2script/pulse
 	:alt: GitHub commits since tagged version
 
