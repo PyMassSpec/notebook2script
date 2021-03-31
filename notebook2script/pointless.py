@@ -145,6 +145,7 @@ import sys
 import warnings
 
 # 3rd party
+from domdf_python_tools.paths import PathPlus
 from pylint import reporters  # type: ignore
 from pylint.lint.pylinter import PyLinter  # type: ignore
 from pylint.utils import utils  # type: ignore
@@ -181,8 +182,8 @@ class Pointless(PyLinter):
 		with fix_import_path([filename]):
 			self._check_files(self.get_ast, self._iterate_file_descrs([filename]))
 
-		filename = pathlib.Path(filename)
-		file_lines = filename.read_text().splitlines()
+		filename = PathPlus(filename)
+		file_lines = filename.read_lines()
 
 		for node in self.statements:
 
@@ -205,7 +206,7 @@ class Pointless(PyLinter):
 			file_lines.append('')
 
 		# print("\n".join(file_lines))
-		filename.write_text('\n'.join(file_lines))
+		filename.write_lines(file_lines)
 
 	def add_message(self, msgid, line=None, node=None, args=None, confidence=None, col_offset=None):
 		"""Adds a message given by ID or name.
