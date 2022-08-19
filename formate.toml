@@ -40,6 +40,7 @@ known_third_party = [
     "coverage_pyver_pragma",
     "domdf_python_tools",
     "github",
+    "importlib_metadata",
     "ipython",
     "isort",
     "nbconvert",
