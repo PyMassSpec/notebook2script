@@ -5,6 +5,7 @@ notebook2script
 .. start short_desc
 
 .. documentation-summary::
+	:meta:
 
 .. end short_desc
 
@@ -25,7 +26,7 @@ notebook2script
 		* - Activity
 		  - |commits-latest| |commits-since| |maintained| |pypi-downloads|
 		* - QA
-		  - |codefactor| |actions_flake8| |actions_mypy| |pre_commit_ci|
+		  - |codefactor| |actions_flake8| |actions_mypy|
 		* - Other
 		  - |license| |language| |requires|
 
@@ -57,7 +58,8 @@ notebook2script
 		:workflow: mypy
 		:alt: mypy status
 
-	.. |requires| requires-io-shield::
+	.. |requires| image:: https://dependency-dash.herokuapp.com/github/PyMassSpec/notebook2script/badge.svg
+		:target: https://dependency-dash.herokuapp.com/github/PyMassSpec/notebook2script/
 		:alt: Requirements Status
 
 	.. |coveralls| coveralls-shield::
@@ -102,16 +104,13 @@ notebook2script
 		:last-commit:
 		:alt: GitHub last commit
 
-	.. |maintained| maintained-shield:: 2021
+	.. |maintained| maintained-shield:: 2022
 		:alt: Maintenance
 
 	.. |pypi-downloads| pypi-shield::
 		:project: notebook2script
 		:downloads: month
 		:alt: PyPI - Downloads
-
-	.. |pre_commit_ci| pre-commit-ci-shield::
-		:alt: pre-commit.ci status
 
 .. end shields
 
@@ -140,12 +139,18 @@ Installation
 	contributing
 	Source
 
+.. sidebar-links::
+	:caption: Links
+	:github:
+	:pypi: notebook2script
+
+
 .. start links
 
 .. only:: html
 
 	View the :ref:`Function Index <genindex>` or browse the `Source Code <_modules/index.html>`__.
 
-	`Browse the GitHub Repository <https://github.com/PyMassSpec/notebook2script>`__
+	:github:repo:`Browse the GitHub Repository <PyMassSpec/notebook2script>`
 
 .. end links

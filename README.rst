@@ -23,7 +23,7 @@ notebook2script
 	* - Activity
 	  - |commits-latest| |commits-since| |maintained| |pypi-downloads|
 	* - QA
-	  - |codefactor| |actions_flake8| |actions_mypy| |pre_commit_ci|
+	  - |codefactor| |actions_flake8| |actions_mypy|
 	* - Other
 	  - |license| |language| |requires|
 
@@ -55,8 +55,8 @@ notebook2script
 	:target: https://github.com/PyMassSpec/notebook2script/actions?query=workflow%3A%22mypy%22
 	:alt: mypy status
 
-.. |requires| image:: https://requires.io/github/PyMassSpec/notebook2script/requirements.svg?branch=master
-	:target: https://requires.io/github/PyMassSpec/notebook2script/requirements/?branch=master
+.. |requires| image:: https://dependency-dash.herokuapp.com/github/PyMassSpec/notebook2script/badge.svg
+	:target: https://dependency-dash.herokuapp.com/github/PyMassSpec/notebook2script/
 	:alt: Requirements Status
 
 .. |coveralls| image:: https://img.shields.io/coveralls/github/PyMassSpec/notebook2script/master?logo=coveralls
@@ -98,16 +98,12 @@ notebook2script
 	:target: https://github.com/PyMassSpec/notebook2script/commit/master
 	:alt: GitHub last commit
 
-.. |maintained| image:: https://img.shields.io/maintenance/yes/2021
+.. |maintained| image:: https://img.shields.io/maintenance/yes/2022
 	:alt: Maintenance
 
 .. |pypi-downloads| image:: https://img.shields.io/pypi/dm/notebook2script
 	:target: https://pypi.org/project/notebook2script/
 	:alt: PyPI - Downloads
-
-.. |pre_commit_ci| image:: https://results.pre-commit.ci/badge/github/PyMassSpec/notebook2script/master.svg
-	:target: https://results.pre-commit.ci/latest/github/PyMassSpec/notebook2script/master
-	:alt: pre-commit.ci status
 
 .. end shields
 
