@@ -2,13 +2,15 @@
 
 # This file is managed by `git_helper`. Don't edit it directly
 
+# stdlib
 import platform
-import rst2txt
 import sys
-from docutils.core import publish_file
 from io import StringIO
 
+# 3rd party
+import rst2txt
 from __pkginfo__ import *
+from docutils.core import publish_file
 
 recipe_dir = repo_root / "conda"
 
@@ -23,15 +25,16 @@ if isinstance(extras_require, dict):
 	for requires in extras_require.values():
 		all_requirements += requires
 
-all_requirements = {x.replace(" ", '') for x in set(all_requirements)}
-requirements_block = "\n".join(f"    - {req}" for req in all_requirements if req)
+all_requirements = {x.replace(' ', '') for x in set(all_requirements)}
+requirements_block = '\n'.join(f"    - {req}" for req in all_requirements if req)
 
 # txt_readme = publish_file(source=StringIO(long_description), writer=rst2txt.Writer())
 # description_block = "\n".join([line.replace('"', '\\"') for line in txt_readme.split("\n")])
 description_block = conda_description.replace('"', '\\"')
 
-with open(recipe_dir / "meta.yaml", "w") as fp:
-	fp.write(f"""{{% set name = "{pypi_name}" %}}
+with open(recipe_dir / "meta.yaml", 'w') as fp:
+	fp.write(
+			f"""{{% set name = "{pypi_name}" %}}
 {{% set version = "{__version__}" %}}
 
 package:
@@ -81,7 +84,8 @@ extra:
     - {author}
     - github.com/{github_username}
 
-""")
+"""
+			)
 
 print(f"Wrote recipe to {recipe_dir / 'meta.yaml'}")
 #
