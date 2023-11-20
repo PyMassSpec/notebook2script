@@ -58,8 +58,8 @@ notebook2script
 		:workflow: mypy
 		:alt: mypy status
 
-	.. |requires| image:: https://dependency-dash.herokuapp.com/github/PyMassSpec/notebook2script/badge.svg
-		:target: https://dependency-dash.herokuapp.com/github/PyMassSpec/notebook2script/
+	.. |requires| image:: https://dependency-dash.repo-helper.uk/github/PyMassSpec/notebook2script/badge.svg
+		:target: https://dependency-dash.repo-helper.uk/github/PyMassSpec/notebook2script/
 		:alt: Requirements Status
 
 	.. |coveralls| coveralls-shield::
@@ -104,7 +104,7 @@ notebook2script
 		:last-commit:
 		:alt: GitHub last commit
 
-	.. |maintained| maintained-shield:: 2022
+	.. |maintained| maintained-shield:: 2023
 		:alt: Maintenance
 
 	.. |pypi-downloads| pypi-shield::
