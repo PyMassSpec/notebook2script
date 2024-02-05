@@ -15,7 +15,7 @@ from notebook2script.__main__ import main
 tests_dir = pathlib.Path(__file__).parent.absolute()
 
 
-def check_output(outfile: PathPlus):
+def check_output(outfile: PathPlus) -> None:
 	# print(outfile)
 
 	assert outfile.is_file()
@@ -72,21 +72,21 @@ def check_output(outfile: PathPlus):
 		assert e_line == a_line
 
 
-def test_process_multiple_notebooks(tmp_pathplus):
+def test_process_multiple_notebooks(tmp_pathplus: PathPlus):
 	notebooks = [tests_dir / "example_notebook.ipynb"]
 	outdir = tmp_pathplus / "output"
 	assert process_multiple_notebooks(notebooks, outdir) == 0
 	check_output(outdir / "example_notebook.py")
 
 
-def test_convert_notebook(tmp_pathplus):
+def test_convert_notebook(tmp_pathplus: PathPlus):
 	notebook = tests_dir / "example_notebook.ipynb"
 	outfile = tmp_pathplus / "output" / "example_notebook.py"
 	convert_notebook(notebook, outfile)
 	check_output(outfile)
 
 
-def test_cli(tmp_pathplus):
+def test_cli(tmp_pathplus: PathPlus):
 	outdir = tmp_pathplus / "output/"
 
 	with in_directory(tmp_pathplus):
@@ -105,7 +105,7 @@ def test_cli(tmp_pathplus):
 	check_output(outdir / "example_notebook.py")
 
 
-def test_cli_glob(tmp_pathplus):
+def test_cli_glob(tmp_pathplus: PathPlus):
 	outdir = tmp_pathplus / "output/"
 
 	with in_directory(tmp_pathplus):

@@ -37,7 +37,7 @@ __all__ = ["main"]
 @click.option("-o", "--outdir", type=click.STRING, default='.', help="Directory to save the output scripts in.")
 @click.option("-f", "--overwrite", is_flag=True, default=False, help="Overwrite existing files.")
 @click_command()
-def main(notebooks: Tuple[str, ...], outdir: str = '.', overwrite: bool = False):
+def main(notebooks: Tuple[str, ...], outdir: str = '.', overwrite: bool = False) -> None:
 	"""
 	Convert Jupyter Notebooks to Python scripts.
 	"""

@@ -28,12 +28,14 @@ Checker for pointless statements.
 from typing import Dict, Tuple
 
 # 3rd party
-import astroid  # type: ignore
-import astroid.bases  # type: ignore
-import astroid.scoped_nodes  # type: ignore
-from pylint import interfaces  # type: ignore
-from pylint.checkers import utils  # type: ignore
-from pylint.checkers.base_checker import BaseChecker  # type: ignore
+import astroid  # type: ignore[import]
+import astroid.bases  # type: ignore[import]
+import astroid.scoped_nodes  # type: ignore[import]
+from astroid import Expr
+from pylint import interfaces  # type: ignore[import]
+from pylint.checkers import utils  # type: ignore[import]
+from pylint.checkers.base_checker import BaseChecker  # type: ignore[import]
+from pylint.lint.pylinter import PyLinter  # type: ignore[import]
 
 __all__ = ["BasicChecker", "register"]
 
@@ -67,7 +69,7 @@ class BasicChecker(BaseChecker):  # noqa: D101
 	reports = ()
 
 	@utils.check_messages("pointless-statement", "pointless-string-statement", "expression-not-assigned")
-	def visit_expr(self, node) -> None:
+	def visit_expr(self, node: Expr) -> None:
 		"""
 		Check for various kinds of statements without effect.
 		"""
@@ -112,7 +114,7 @@ class BasicChecker(BaseChecker):  # noqa: D101
 			self.add_message("pointless-statement", node=node)
 
 
-def register(linter) -> None:
+def register(linter: PyLinter) -> None:
 	"""
 	Required function to auto register this checker.
 	"""

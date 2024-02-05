@@ -1,4 +1,5 @@
 # 3rd party
+import os
 from coincidence.regressions import AdvancedFileRegressionFixture
 
 # this package
@@ -40,6 +41,6 @@ data
 
 	linter = Pointless()
 
-	linter.process_file(outfile)
+	linter.process_file(os.fspath(outfile))
 
 	advanced_file_regression.check_file(outfile)

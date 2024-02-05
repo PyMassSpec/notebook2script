@@ -24,17 +24,16 @@ Convert Jupyter Notebooks to Python Scripts.
 
 # stdlib
 import os
-import pathlib
-from typing import Iterable, Union
+from typing import Iterable
 
 # 3rd party
-import isort  # type: ignore
+import isort
 import yapf_isort
 from domdf_python_tools.compat import importlib_resources
 from domdf_python_tools.paths import PathPlus
 from domdf_python_tools.typing import PathLike
-from nbconvert import PythonExporter  # type: ignore
-from pre_commit_hooks.fix_encoding_pragma import fix_encoding_pragma  # type: ignore
+from nbconvert import PythonExporter  # type: ignore[import]
+from pre_commit_hooks.fix_encoding_pragma import fix_encoding_pragma  # type: ignore[import]
 
 # this package
 from notebook2script.pointless import Pointless
@@ -58,7 +57,7 @@ py_exporter = PythonExporter()
 def convert_notebook(
 		nb_file: PathLike,
 		outfile: PathLike,
-		):
+		) -> None:
 	"""
 	Convert a notebook to a Python file.
 
@@ -78,9 +77,9 @@ def convert_notebook(
 		with importlib_resources.path("notebook2script", "style.yapf") as yapf_style:
 			reformat_file(outfile, yapf_style=str(yapf_style), isort_config_file=str(isort_config))
 
-	linter.process_file(outfile)
+	linter.process_file(os.fspath(outfile))
 
-	with open(outfile, "r+b") as f:
+	with outfile.open("r+b") as f:
 		fix_encoding_pragma(f, remove=True, expected_pragma=b"# coding: utf-8")
 
 

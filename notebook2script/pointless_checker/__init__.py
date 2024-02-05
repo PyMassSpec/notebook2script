@@ -25,16 +25,17 @@ Checker for pointless statements.
 #
 
 # 3rd party
-from pylint.checkers.base_checker import BaseChecker, BaseTokenChecker  # type: ignore
-from pylint.utils import register_plugins  # type: ignore
+from pylint.checkers.base_checker import BaseChecker, BaseTokenChecker  # type: ignore[import]
+from pylint.lint.pylinter import PyLinter  # type: ignore[import]
+from pylint.utils import register_plugins  # type: ignore[import]
 
 
-def initialize(linter):
+def initialize(linter: PyLinter) -> None:
 	"""
 	Initialize linter with checkers in this package.
 	"""
 
-	register_plugins(linter, __path__[0])  # type: ignore
+	register_plugins(linter, __path__[0])  # type: ignore[name-defined]
 
 
 __all__ = ("BaseChecker", "BaseTokenChecker", "initialize")

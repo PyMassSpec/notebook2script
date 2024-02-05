@@ -140,15 +140,16 @@ into print function calls
 
 # stdlib
 import contextlib
-import pathlib
 import sys
 import warnings
+from typing import Any, Iterable, Iterator, List, Optional
 
 # 3rd party
+from astroid import Expr  # type: ignore[import]
 from domdf_python_tools.paths import PathPlus
-from pylint import reporters  # type: ignore
-from pylint.lint.pylinter import PyLinter  # type: ignore
-from pylint.utils import utils  # type: ignore
+from pylint import reporters  # type: ignore[import]
+from pylint.lint.pylinter import PyLinter  # type: ignore[import]
+from pylint.utils import utils  # type: ignore[import]
 
 # this package
 from notebook2script import pointless_checker
@@ -168,7 +169,7 @@ class Pointless(PyLinter):
 		self.initialize()
 		self.statements = []
 
-	def load_default_plugins(self):  # noqa: D102
+	def load_default_plugins(self) -> None:  # noqa: D102
 		pointless_checker.initialize(self)
 		reporters.initialize(self)
 		# Make sure to load the default reporter, because
@@ -176,14 +177,14 @@ class Pointless(PyLinter):
 		if not self.reporter:
 			self._load_reporter()
 
-	def process_file(self, filename):  # noqa: D102
+	def process_file(self, filename: str) -> None:  # noqa: D102
 		self.statements = []
 
 		with fix_import_path([filename]):
 			self._check_files(self.get_ast, self._iterate_file_descrs([filename]))
 
-		filename = PathPlus(filename)
-		file_lines = filename.read_lines()
+		path = PathPlus(filename)
+		file_lines = path.read_lines()
 
 		for node in self.statements:
 
@@ -206,9 +207,16 @@ class Pointless(PyLinter):
 			file_lines.append('')
 
 		# print("\n".join(file_lines))
-		filename.write_lines(file_lines)
+		path.write_lines(file_lines)
 
-	def add_message(self, msgid, line=None, node=None, args=None, confidence=None, col_offset=None):
+	def add_message(
+			self,
+			msgid: Any,
+			line: Optional[Any] = None,
+			node: Optional[Expr] = None,
+			*args,
+			**kwargs,
+			) -> None:
 		"""Adds a message given by ID or name.
 
 		If provided, the message string is expanded using args.
@@ -222,7 +230,7 @@ class Pointless(PyLinter):
 		# super().add_message(msgid, line, node, args, confidence, col_offset)
 
 
-def _patch_sys_path(args):
+def _patch_sys_path(args: Iterable[str]) -> List[str]:
 	original = list(sys.path)
 	changes = []
 	seen = set()
@@ -237,7 +245,7 @@ def _patch_sys_path(args):
 
 
 @contextlib.contextmanager
-def fix_import_path(args):
+def fix_import_path(args: Iterable[str]) -> Iterator[None]:
 	"""
 	Prepare sys.path for running the linter checks.
 
