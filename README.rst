@@ -55,8 +55,8 @@ notebook2script
 	:target: https://github.com/PyMassSpec/notebook2script/actions?query=workflow%3A%22mypy%22
 	:alt: mypy status
 
-.. |requires| image:: https://dependency-dash.herokuapp.com/github/PyMassSpec/notebook2script/badge.svg
-	:target: https://dependency-dash.herokuapp.com/github/PyMassSpec/notebook2script/
+.. |requires| image:: https://dependency-dash.repo-helper.uk/github/PyMassSpec/notebook2script/badge.svg
+	:target: https://dependency-dash.repo-helper.uk/github/PyMassSpec/notebook2script/
 	:alt: Requirements Status
 
 .. |coveralls| image:: https://img.shields.io/coveralls/github/PyMassSpec/notebook2script/master?logo=coveralls
@@ -98,7 +98,7 @@ notebook2script
 	:target: https://github.com/PyMassSpec/notebook2script/commit/master
 	:alt: GitHub last commit
 
-.. |maintained| image:: https://img.shields.io/maintenance/yes/2022
+.. |maintained| image:: https://img.shields.io/maintenance/yes/2024
 	:alt: Maintenance
 
 .. |pypi-downloads| image:: https://img.shields.io/pypi/dm/notebook2script
