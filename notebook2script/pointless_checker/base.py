@@ -28,14 +28,14 @@ Checker for pointless statements.
 from typing import Dict, Tuple
 
 # 3rd party
-import astroid  # type: ignore[import]
-import astroid.bases  # type: ignore[import]
-import astroid.scoped_nodes  # type: ignore[import]
+import astroid  # type: ignore[import-untyped]
+import astroid.bases  # type: ignore[import-untyped]
+import astroid.scoped_nodes  # type: ignore[import-untyped]
 from astroid import Expr
-from pylint import interfaces  # type: ignore[import]
-from pylint.checkers import utils  # type: ignore[import]
-from pylint.checkers.base_checker import BaseChecker  # type: ignore[import]
-from pylint.lint.pylinter import PyLinter  # type: ignore[import]
+from pylint import interfaces  # type: ignore[import-untyped]
+from pylint.checkers import utils  # type: ignore[import-untyped]
+from pylint.checkers.base_checker import BaseChecker  # type: ignore[import-untyped]
+from pylint.lint.pylinter import PyLinter  # type: ignore[import-untyped]
 
 __all__ = ["BasicChecker", "register"]
 

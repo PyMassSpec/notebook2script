@@ -32,8 +32,8 @@ import yapf_isort
 from domdf_python_tools.compat import importlib_resources
 from domdf_python_tools.paths import PathPlus
 from domdf_python_tools.typing import PathLike
-from nbconvert import PythonExporter  # type: ignore[import]
-from pre_commit_hooks.fix_encoding_pragma import fix_encoding_pragma  # type: ignore[import]
+from nbconvert import PythonExporter
+from pre_commit_hooks.fix_encoding_pragma import fix_encoding_pragma  # type: ignore[import-untyped]
 
 # this package
 from notebook2script.pointless import Pointless

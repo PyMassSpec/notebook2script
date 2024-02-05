@@ -145,11 +145,11 @@ import warnings
 from typing import Any, Iterable, Iterator, List, Optional
 
 # 3rd party
-from astroid import Expr  # type: ignore[import]
+from astroid import Expr  # type: ignore[import-untyped]
 from domdf_python_tools.paths import PathPlus
-from pylint import reporters  # type: ignore[import]
-from pylint.lint.pylinter import PyLinter  # type: ignore[import]
-from pylint.utils import utils  # type: ignore[import]
+from pylint import reporters  # type: ignore[import-untyped]
+from pylint.lint.pylinter import PyLinter  # type: ignore[import-untyped]
+from pylint.utils import utils  # type: ignore[import-untyped]
 
 # this package
 from notebook2script import pointless_checker
