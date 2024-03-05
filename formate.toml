@@ -54,5 +54,5 @@ known_third_party = [
     "requests",
     "yapf_isort",
 ]
-known_first_party = "notebook2script"
+known_first_party = [ "notebook2script",]
 line_length = 115

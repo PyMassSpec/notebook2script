@@ -1,5 +1,7 @@
-# 3rd party
+# stdlib
 import os
+
+# 3rd party
 from coincidence.regressions import AdvancedFileRegressionFixture
 
 # this package
