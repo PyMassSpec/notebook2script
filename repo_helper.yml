@@ -12,7 +12,8 @@ conda_description: 'Convert Jupyter Notebooks to Python Scripts'
 
 use_whey: true
 enable_conda: False
-mypy_version: "1.8.0"
+mypy_version: 1.16
+python_deploy_version: 3.9
 
 conda_channels:
   - conda-forge

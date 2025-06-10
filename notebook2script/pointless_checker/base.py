@@ -32,19 +32,19 @@ import astroid  # type: ignore[import-untyped]
 import astroid.bases  # type: ignore[import-untyped]
 import astroid.scoped_nodes  # type: ignore[import-untyped]
 from astroid import Expr
-from pylint import interfaces  # type: ignore[import-untyped]
-from pylint.checkers import utils  # type: ignore[import-untyped]
-from pylint.checkers.base_checker import BaseChecker  # type: ignore[import-untyped]
-from pylint.lint.pylinter import PyLinter  # type: ignore[import-untyped]
+from pylint import interfaces
+from pylint.checkers import utils
+from pylint.checkers.base_checker import BaseChecker
+from pylint.lint.pylinter import PyLinter
 
 __all__ = ["BasicChecker", "register"]
 
 
 class BasicChecker(BaseChecker):  # noqa: D101
 
-	__implements__ = interfaces.IAstroidChecker
+	__implements__ = interfaces.IAstroidChecker  # type: ignore[attr-defined]
 
-	msgs: Dict[str, Tuple[str, str, str]] = {
+	msgs = {
 			"W0104": (
 					"Statement seems to have no effect",
 					"pointless-statement",
@@ -68,7 +68,11 @@ class BasicChecker(BaseChecker):  # noqa: D101
 
 	reports = ()
 
-	@utils.check_messages("pointless-statement", "pointless-string-statement", "expression-not-assigned")
+	@utils.check_messages(  # type: ignore[attr-defined]
+		"pointless-statement",
+		"pointless-string-statement",
+		"expression-not-assigned",
+		)
 	def visit_expr(self, node: Expr) -> None:
 		"""
 		Check for various kinds of statements without effect.
