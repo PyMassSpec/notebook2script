@@ -147,9 +147,9 @@ from typing import Any, Iterable, Iterator, List, Optional
 # 3rd party
 from astroid import Expr  # type: ignore[import-untyped]
 from domdf_python_tools.paths import PathPlus
-from pylint import reporters
-from pylint.lint.pylinter import PyLinter
-from pylint.utils import utils
+from pylint import reporters  # type: ignore[import-untyped]
+from pylint.lint.pylinter import PyLinter  # type: ignore[import-untyped]
+from pylint.utils import utils  # type: ignore[import-untyped]
 
 # this package
 from notebook2script import pointless_checker
@@ -175,13 +175,13 @@ class Pointless(PyLinter):
 		# Make sure to load the default reporter, because
 		# the option has been set before the plugins had been loaded.
 		if not self.reporter:
-			self._load_reporter()  # type: ignore[attr-defined]
+			self._load_reporter()
 
 	def process_file(self, filename: str) -> None:  # noqa: D102
 		self.statements = []
 
 		with fix_import_path([filename]):
-			self._check_files(self.get_ast, self._iterate_file_descrs([filename]))  # type: ignore[attr-defined]
+			self._check_files(self.get_ast, self._iterate_file_descrs([filename]))
 
 		path = PathPlus(filename)
 		file_lines = path.read_lines()
@@ -235,7 +235,7 @@ def _patch_sys_path(args: Iterable[str]) -> List[str]:
 	changes = []
 	seen = set()
 	for arg in args:
-		path = utils.get_python_path(arg)  # type: ignore[attr-defined]
+		path = utils.get_python_path(arg)
 		if path not in seen:
 			changes.append(path)
 			seen.add(path)
