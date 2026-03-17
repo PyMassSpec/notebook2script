@@ -53,7 +53,7 @@ def check_output(outfile: PathPlus) -> None:
 	type('3')
 	# In[11]:
 	print('3' + '3')
-	"""
+	""",
 			).split('\n'):
 		if not re.match(r"^#*\s*$", line):
 			continue

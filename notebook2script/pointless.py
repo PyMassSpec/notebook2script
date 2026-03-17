@@ -217,7 +217,8 @@ class Pointless(PyLinter):
 			*args,
 			**kwargs,
 			) -> None:
-		"""Adds a message given by ID or name.
+		"""
+		Adds a message given by ID or name.
 
 		If provided, the message string is expanded using args.
 

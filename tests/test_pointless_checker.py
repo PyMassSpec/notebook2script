@@ -3,15 +3,16 @@ import os
 
 # 3rd party
 from coincidence.regressions import AdvancedFileRegressionFixture
+from domdf_python_tools.paths import PathPlus
 
 # this package
 from notebook2script.pointless import Pointless
 
 
-def test_pointless_checker(tmp_path, advanced_file_regression: AdvancedFileRegressionFixture):
+def test_pointless_checker(tmp_pathplus: PathPlus, advanced_file_regression: AdvancedFileRegressionFixture):
 	# Make a file with some "pointless" statements
 
-	outfile = tmp_path / "test_script.py"
+	outfile = tmp_pathplus / "test_script.py"
 
 	outfile.write_text(
 			"""\
@@ -38,7 +39,7 @@ np.arange(
 data = np.arange(10)
 data
 
-"""
+""",
 			)
 
 	linter = Pointless()
