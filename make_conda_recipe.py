@@ -84,7 +84,7 @@ extra:
     - {author}
     - github.com/{github_username}
 
-"""
+""",
 			)
 
 print(f"Wrote recipe to {recipe_dir / 'meta.yaml'}")
