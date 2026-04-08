@@ -40,7 +40,7 @@ base-classifiers = [
 python-versions = [ "3.7", "3.8", "3.9", "3.10",]
 python-implementations = [ "CPython",]
 platforms = [ "Windows", "macOS", "Linux",]
-license-key = "GPL-2.0-only"
+license-key = "GPLv2"
 additional-files = [ "include notebook2script/isort.cfg", "include notebook2script/style.yapf",]
 
 [tool.sphinx-pyproject]
